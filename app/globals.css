@@ -159,21 +159,30 @@ em { color: var(--gold); font-style: italic; }
   padding: 12px 28px;
 }
 
-/* ─── Hero — split: text left, photo right ───────────────── */
+/* ─── Hero — full-bleed photo, warm ivory fade left ─────── */
 
 .hero {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
   min-height: 100vh;
+  background:
+    linear-gradient(to right,
+      rgba(250,245,236,0.97) 0%,
+      rgba(250,245,236,0.88) 28%,
+      rgba(250,245,236,0.45) 55%,
+      rgba(250,245,236,0.0) 100%),
+    url("/hero2.jpg") center right / cover;
+  display: flex;
+  align-items: center;
+  padding: 160px 7% 100px;
+  position: relative;
 }
 
 .heroLeft {
-  background: var(--ivory);
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  padding: 120px 7% 80px;
+  max-width: 580px;
 }
+
+.heroRight { display: none; }
 
 .heroEyebrow {
   font-size: 0.62rem;
@@ -186,8 +195,8 @@ em { color: var(--gold); font-style: italic; }
 
 .heroLeft h1 {
   font-family: var(--font-serif);
-  font-size: clamp(3rem, 4.5vw, 6rem);
-  line-height: 1.05;
+  font-size: clamp(3rem, 5vw, 7rem);
+  line-height: 1.04;
   font-weight: 400;
   color: var(--text);
   margin-bottom: 28px;
@@ -195,16 +204,11 @@ em { color: var(--gold); font-style: italic; }
 }
 
 .heroLeft > p {
-  max-width: 360px;
+  max-width: 380px;
   font-size: 0.92rem;
   line-height: 1.9;
   color: var(--muted);
   margin-bottom: 44px;
-}
-
-.heroRight {
-  background: url("/hero2.jpg") center / cover;
-  /* No gradient. The photo stands clean. */
 }
 
 /* ─── Buttons ────────────────────────────────────────────── */
@@ -796,9 +800,8 @@ details[open] summary::after { transform: rotate(45deg); }
   .siteNavLinks, .siteNav .navCta { display: none; }
   .siteNav .hamburger { display: flex; }
 
-  .hero { grid-template-columns: 1fr; min-height: auto; }
-  .heroLeft { padding: 130px 8% 70px; justify-content: flex-end; min-height: 70vh; }
-  .heroRight { height: 55vw; min-height: 280px; }
+  .hero { padding: 140px 8% 80px; background-position: center; }
+  .heroLeft { max-width: 100%; }
 
   .intro { grid-template-columns: 1fr; gap: 48px; padding: 80px 8%; }
 
