@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Velvet — Design Proposals</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    a { text-decoration: none; color: inherit; }
+
+    :root {
+      --black: #11110f;
+      --cream: #f5efe5;
+      --ivory: #fbf8f1;
+      --gold: #b8955b;
+      --text: #221f1a;
+      --muted: #6d655b;
+    }
+
+    body {
+      background: #0c0b09;
+      color: white;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+    }
+
+    em { color: var(--gold); font-style: italic; }
+
+    /* ─── Page header ─────────────────────────────── */
+    .page-header {
+      text-align: center;
+      padding: 80px 8% 60px;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+
+    .page-header .eyebrow {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.24em;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 18px;
+    }
+
+    .page-header h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.6rem;
+      font-weight: 400;
+      margin-bottom: 14px;
+    }
+
+    .page-header p {
+      color: rgba(255,255,255,0.38);
+      font-size: 0.85rem;
+      max-width: 480px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+
+    /* ─── Proposal block ──────────────────────────── */
+    .proposal {
+      padding: 80px 5%;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .proposal-header {
+      text-align: center;
+      margin-bottom: 52px;
+    }
+
+    .proposal-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      border: 1px solid rgba(184,149,91,0.35);
+      color: var(--gold);
+      font-size: 0.62rem;
+      font-weight: 600;
+      margin-bottom: 18px;
+    }
+
+    .proposal-header h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 400;
+      margin-bottom: 10px;
+    }
+
+    .proposal-header p {
+      color: rgba(255,255,255,0.35);
+      font-size: 0.78rem;
+      max-width: 520px;
+      margin: 0 auto;
+      line-height: 1.85;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .panel-wrap { display: flex; flex-direction: column; }
+
+    .panel-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 14px;
+      font-size: 0.62rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-weight: 600;
+      margin-bottom: 8px;
+      align-self: flex-start;
+    }
+
+    .current .panel-badge { color: #c07878; border: 1px solid rgba(192,120,120,0.22); }
+    .proposed .panel-badge { color: var(--gold); border: 1px solid rgba(184,149,91,0.32); }
+
+    .panel-badge::before {
+      content: '';
+      display: block;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .current .panel-badge::before { background: #c07878; }
+    .proposed .panel-badge::before { background: var(--gold); }
+
+    .panel-inner {
+      border: 1px solid;
+      overflow: hidden;
+    }
+
+    .current .panel-inner { border-color: rgba(192,120,120,0.2); }
+    .proposed .panel-inner { border-color: rgba(184,149,91,0.25); }
+
+    .code-note {
+      padding: 10px 16px;
+      font-size: 0.6rem;
+      font-family: 'Courier New', monospace;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .current .code-note { background: #14120f; color: rgba(192,120,120,0.5); }
+    .proposed .code-note { background: #14120f; color: rgba(184,149,91,0.45); }
+
+    /* ─── Reusable site elements ──────────────────── */
+
+    .site-eyebrow {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.72rem;
+      font-weight: 600;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .diff-item {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .diff-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.6rem;
+      color: var(--gold);
+      opacity: 0.25;
+      line-height: 0.85;
+      font-weight: 400;
+      flex-shrink: 0;
+      width: 40px;
+      user-select: none;
+    }
+
+    .diff-item h3 {
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 6px;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .diff-item p {
+      color: #b8b0a6;
+      line-height: 1.7;
+      font-size: 0.88rem;
+    }
+
+    .site-btn-dark {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      padding: 18px 32px;
+      background: var(--black);
+      color: white;
+      font-size: 0.73rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-weight: 600;
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* ─── PROPOSAL 1: Difference section ─────────── */
+
+    /* CURRENT: 2-column (photo left, content right) */
+    .diff-current {
+      display: grid;
+      grid-template-columns: 1fr 1.3fr;
+      background: var(--black);
+      min-height: 440px;
+    }
+
+    .diff-photo-col {
+      background:
+        url('http://localhost:3000/hands.png') center/cover;
+    }
+
+    .diff-content-col {
+      padding: 60px 44px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0;
+      background: var(--black);
+    }
+
+    .diff-content-col h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.2rem;
+      line-height: 1.1;
+      font-weight: 400;
+      color: white;
+      margin: 16px 0 36px;
+    }
+
+    .diff-list { display: flex; flex-direction: column; gap: 28px; padding-top: 28px; border-top: 1px solid rgba(184,149,91,0.25); }
+
+    /* PROPOSED: Full-bleed photo with text overlay */
+    .diff-fullbleed {
+      min-height: 480px;
+      background:
+        linear-gradient(to right, rgba(17,17,15,0.08) 0%, rgba(17,17,15,0.7) 45%, rgba(17,17,15,0.88) 100%),
+        url('http://localhost:3000/hands.png') center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 70px 7%;
+    }
+
+    .diff-overlay-content {
+      max-width: 460px;
+      color: white;
+    }
+
+    .diff-overlay-content h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.4rem;
+      line-height: 1.1;
+      font-weight: 400;
+      margin: 16px 0 36px;
+    }
+
+    /* ─── PROPOSAL 2: Pause + Contact merged ─────── */
+
+    /* CURRENT: Two separate boxes */
+    .pause-current {
+      background:
+        radial-gradient(ellipse 60% 80% at 0% 50%, rgba(184,149,91,0.05) 0%, transparent 70%),
+        var(--ivory);
+      padding: 70px 8%;
+      text-align: center;
+    }
+
+    .pause-current p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.4rem;
+      font-weight: 400;
+      color: var(--text);
+      max-width: 680px;
+      margin: 0 auto;
+      line-height: 1.18;
+    }
+
+    .contact-current {
+      background:
+        radial-gradient(ellipse 60% 60% at 100% 0%, rgba(184,149,91,0.07) 0%, transparent 65%),
+        var(--cream);
+      padding: 70px 8%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 20px;
+    }
+
+    .contact-current h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.4rem;
+      font-weight: 400;
+      line-height: 1.1;
+      color: var(--text);
+    }
+
+    .contact-current > p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.8;
+      max-width: 340px;
+    }
+
+    .section-divider {
+      height: 3px;
+      background: rgba(192,120,120,0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.55rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(192,120,120,0.7);
+      gap: 12px;
+    }
+
+    .section-divider::before,
+    .section-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: rgba(192,120,120,0.25);
+    }
+
+    /* PROPOSED: One merged section */
+    .merged-section {
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 100%, rgba(184,149,91,0.06) 0%, transparent 70%),
+        var(--cream);
+      padding: 90px 8% 100px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .merged-statement {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.6rem, 2.4vw, 2.4rem);
+      font-weight: 400;
+      color: var(--muted);
+      max-width: 620px;
+      line-height: 1.3;
+      margin-bottom: 60px;
+      padding-bottom: 60px;
+      border-bottom: 1px solid rgba(184,149,91,0.2);
+    }
+
+    .merged-cta h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.2rem, 3.8vw, 4rem);
+      font-weight: 400;
+      line-height: 1.1;
+      color: var(--text);
+      margin-bottom: 18px;
+    }
+
+    .merged-cta > p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.8;
+      max-width: 340px;
+      margin: 0 auto 32px;
+    }
+
+    /* ─── PROPOSAL 3: Full page flow ─────────────── */
+    .flow-diagram {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .flow-block {
+      padding: 18px 28px;
+      font-size: 0.72rem;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .flow-block .label {
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-weight: 600;
+      min-width: 140px;
+      font-size: 0.65rem;
+    }
+
+    .flow-block .desc {
+      opacity: 0.6;
+      font-size: 0.72rem;
+    }
+
+    .flow-block.dark { background: rgba(17,17,15,0.7); color: white; }
+    .flow-block.light { background: rgba(251,248,241,0.08); color: rgba(255,255,255,0.7); }
+    .flow-block.removed { background: rgba(192,120,120,0.08); color: rgba(192,120,120,0.6); text-decoration: line-through; opacity: 0.5; }
+    .flow-block.merged { background: rgba(184,149,91,0.1); color: var(--gold); }
+    .flow-block.new-combined { background: rgba(184,149,91,0.12); border: 1px solid rgba(184,149,91,0.25); color: var(--gold); }
+
+    .flow-count {
+      font-size: 0.55rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 8px;
+      border-top: 1px solid rgba(255,255,255,0.07);
+    }
+
+    .flow-count.before { color: rgba(192,120,120,0.6); }
+    .flow-count.after { color: rgba(184,149,91,0.7); }
+
+    .arrow {
+      text-align: center;
+      font-size: 1.5rem;
+      opacity: 0.4;
+      padding: 8px;
+    }
+
+    /* ─── Summary ─────────────────────────────────── */
+    .summary {
+      text-align: center;
+      padding: 80px 8%;
+    }
+
+    .summary h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 400;
+      margin-bottom: 40px;
+    }
+
+    .choice-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .choice-card {
+      border: 1px solid rgba(184,149,91,0.18);
+      padding: 32px 24px;
+      text-align: left;
+      background: rgba(255,255,255,0.015);
+    }
+
+    .choice-card .num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      color: var(--gold);
+      opacity: 0.3;
+      line-height: 1;
+      display: block;
+      margin-bottom: 14px;
+    }
+
+    .choice-card h3 {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: white;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .choice-card p {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.35);
+      line-height: 1.75;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ─── Header ──────────────────────────────────── -->
+  <div class="page-header">
+    <span class="eyebrow">Design Proposals — Velvet Concierge Care</span>
+    <h1>Proposed Changes</h1>
+    <p>Three options to reduce the "stacked boxes" feeling. Review each before anything is implemented.</p>
+  </div>
+
+
+  <!-- ─── PROPOSAL 1: Difference Section ─────────── -->
+  <div class="proposal">
+    <div class="proposal-header">
+      <div class="proposal-num">01</div>
+      <h2>Difference Section — Full-Bleed Photo</h2>
+      <p>Right now: photo column on the left, content column on the right — still two visible panels. Proposed: the hands photo fills the entire section as a background, with text overlaid using a gradient. Same feel as the testimonial section — no visible column boundary at all.</p>
+    </div>
+
+    <div class="split">
+
+      <div class="panel-wrap current">
+        <div class="panel-badge">Current — 2 visible panels</div>
+        <div class="panel-inner">
+          <div class="diff-current">
+            <div class="diff-photo-col"></div>
+            <div class="diff-content-col">
+              <span class="site-eyebrow">The Velvet Difference</span>
+              <h2>Clinical expertise.<br>Thoughtful care.<br><em>Unwavering attention.</em></h2>
+              <div class="diff-list">
+                <div class="diff-item">
+                  <span class="diff-num">01</span>
+                  <div><h3>RN-Led Oversight</h3><p>Registered Nurse expertise guiding every care plan and decision.</p></div>
+                </div>
+                <div class="diff-item">
+                  <span class="diff-num">02</span>
+                  <div><h3>Personalized Support</h3><p>Care tailored to your unique needs, preferences, and lifestyle.</p></div>
+                </div>
+                <div class="diff-item">
+                  <span class="diff-num">03</span>
+                  <div><h3>Clear Communication</h3><p>We keep you informed and involved every step of the way.</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="code-note">grid: photo column | content column — still two visible boxes</div>
+        </div>
+      </div>
+
+      <div class="panel-wrap proposed">
+        <div class="panel-badge">Proposed — full-bleed, no column boundary</div>
+        <div class="panel-inner">
+          <div class="diff-fullbleed">
+            <div class="diff-overlay-content">
+              <span class="site-eyebrow">The Velvet Difference</span>
+              <h2>Clinical expertise.<br>Thoughtful care.<br><em>Unwavering attention.</em></h2>
+              <div class="diff-list">
+                <div class="diff-item">
+                  <span class="diff-num">01</span>
+                  <div><h3>RN-Led Oversight</h3><p>Registered Nurse expertise guiding every care plan and decision.</p></div>
+                </div>
+                <div class="diff-item">
+                  <span class="diff-num">02</span>
+                  <div><h3>Personalized Support</h3><p>Care tailored to your unique needs, preferences, and lifestyle.</p></div>
+                </div>
+                <div class="diff-item">
+                  <span class="diff-num">03</span>
+                  <div><h3>Clear Communication</h3><p>We keep you informed and involved every step of the way.</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="code-note">full-bleed hands photo · dark gradient right side · text floats over image · no column</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ─── PROPOSAL 2: Merge Pause + Contact ────────── -->
+  <div class="proposal">
+    <div class="proposal-header">
+      <div class="proposal-num">02</div>
+      <h2>Merge Pause &amp; Contact Into One Section</h2>
+      <p>Right now there are two consecutive light-background boxes: the "we don't fit families" statement and then the "let's talk" contact section. They're the same visual weight, same color family, stacked directly on each other. Merging them into one removes a box without losing any content.</p>
+    </div>
+
+    <div class="split">
+
+      <div class="panel-wrap current">
+        <div class="panel-badge">Current — 2 separate boxes</div>
+        <div class="panel-inner">
+          <!-- Box 1: Pause -->
+          <div class="pause-current">
+            <p>We don't fit families into care plans. <em>We build care plans around families.</em></p>
+          </div>
+          <!-- Visible divider to show the box boundary -->
+          <div class="section-divider">← section break →</div>
+          <!-- Box 2: Contact -->
+          <div class="contact-current">
+            <h2>Let's talk about<br><em>how we can help.</em></h2>
+            <p>Every family's situation is different. We'd love to learn about yours.</p>
+            <div class="site-btn-dark">SCHEDULE A CONVERSATION <span>→</span></div>
+          </div>
+          <div class="code-note">pause section (ivory) → hard edge → contact section (cream) — 2 boxes stacked</div>
+        </div>
+      </div>
+
+      <div class="panel-wrap proposed">
+        <div class="panel-badge">Proposed — one continuous section</div>
+        <div class="panel-inner">
+          <div class="merged-section">
+            <p class="merged-statement">
+              We don't fit families into care plans.<br>
+              <em>We build care plans around families.</em>
+            </p>
+            <div class="merged-cta">
+              <h2>Let's talk about<br><em>how we can help.</em></h2>
+              <p>Every family's situation is different. We'd love to learn about yours.</p>
+              <div class="site-btn-dark">SCHEDULE A CONVERSATION <span>→</span></div>
+            </div>
+          </div>
+          <div class="code-note">one section · same background · statement flows into CTA · no visible break</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ─── PROPOSAL 3: Full page flow ────────────────── -->
+  <div class="proposal">
+    <div class="proposal-header">
+      <div class="proposal-num">03</div>
+      <h2>Overall Page Flow — Before vs After</h2>
+      <p>With both changes applied, the page goes from 7 distinct rectangular blocks to 5. The two changes work together — the full-bleed difference section eliminates the column feel, and the merged section eliminates one entire box.</p>
+    </div>
+
+    <div class="split">
+
+      <div class="panel-wrap current">
+        <div class="panel-badge">Current — 7 blocks</div>
+        <div class="panel-inner">
+          <div class="flow-diagram">
+            <div class="flow-block dark"><span class="label">Hero</span><span class="desc">Dark · full viewport</span></div>
+            <div class="flow-block light"><span class="label">Intro</span><span class="desc">Ivory · 2-column with gold rule</span></div>
+            <div class="flow-block dark"><span class="label">Testimonial</span><span class="desc">Dark · home interior photo + quote</span></div>
+            <div class="flow-block dark"><span class="label">Difference</span><span class="desc">Dark · photo left · content right · 2 panels</span></div>
+            <div class="flow-block light"><span class="label">Pause</span><span class="desc">Ivory · one statement sentence</span></div>
+            <div class="flow-block light"><span class="label">Contact</span><span class="desc">Cream · headline + CTA</span></div>
+            <div class="flow-block dark"><span class="label">Footer</span><span class="desc">Dark</span></div>
+          </div>
+          <div class="flow-count before">7 distinct blocks · 4 background changes in sequence</div>
+        </div>
+      </div>
+
+      <div class="panel-wrap proposed">
+        <div class="panel-badge">Proposed — 5 blocks</div>
+        <div class="panel-inner">
+          <div class="flow-diagram">
+            <div class="flow-block dark"><span class="label">Hero</span><span class="desc">Dark · full viewport</span></div>
+            <div class="flow-block light"><span class="label">Intro</span><span class="desc">Ivory · 2-column editorial</span></div>
+            <div class="flow-block dark"><span class="label">Testimonial</span><span class="desc">Dark · home interior photo + quote</span></div>
+            <div class="flow-block dark"><span class="label">Difference</span><span class="desc">Dark · <em style="color:var(--gold)">hands photo full-bleed · no column boundary</em></span></div>
+            <div class="flow-block new-combined"><span class="label">Statement + CTA</span><span class="desc">One section · statement flows into contact</span></div>
+            <div class="flow-block dark"><span class="label">Footer</span><span class="desc">Dark</span></div>
+          </div>
+          <div class="flow-count after">5 blocks · 2 boxes removed · cleaner rhythm</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ─── Summary ─────────────────────────────────── -->
+  <div class="summary">
+    <h2>Three decisions to make</h2>
+    <div class="choice-grid">
+      <div class="choice-card">
+        <span class="num">01</span>
+        <h3>Difference Section</h3>
+        <p>Full-bleed hands photo with text overlaid — same treatment as the testimonial section. No column boundary. More immersive.</p>
+      </div>
+      <div class="choice-card">
+        <span class="num">02</span>
+        <h3>Merge Pause + Contact</h3>
+        <p>The statement and the CTA become one continuous section. Same content, one fewer box. The statement becomes the emotional opener for the contact area.</p>
+      </div>
+      <div class="choice-card">
+        <span class="num">03</span>
+        <h3>Do both, or just one?</h3>
+        <p>Each change is independent. You can approve one and not the other. Or approve both and I'll implement them together in a single pass.</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

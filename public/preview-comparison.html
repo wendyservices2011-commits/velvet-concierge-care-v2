@@ -1,0 +1,1401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Velvet Concierge Care — Before & After</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    a { text-decoration: none; color: inherit; }
+
+    :root {
+      --black: #11110f;
+      --cream: #f5efe5;
+      --ivory: #fbf8f1;
+      --gold: #b8955b;
+      --text: #221f1a;
+      --muted: #6d655b;
+    }
+
+    body {
+      background: #0c0b09;
+      color: white;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    code {
+      font-family: 'Courier New', monospace;
+      font-size: 0.85em;
+      background: rgba(255,255,255,0.07);
+      padding: 1px 5px;
+      border-radius: 2px;
+      color: rgba(255,255,255,0.7);
+    }
+
+    /* ─── Page Header ─────────────────────────────────────── */
+
+    .page-header {
+      text-align: center;
+      padding: 90px 8% 70px;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      background: linear-gradient(180deg, rgba(184,149,91,0.05) 0%, transparent 100%);
+    }
+
+    .eyebrow {
+      display: block;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.24em;
+      color: var(--gold);
+      margin-bottom: 22px;
+      opacity: 0.8;
+    }
+
+    .page-header h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.2rem;
+      font-weight: 400;
+      color: white;
+      margin-bottom: 18px;
+      letter-spacing: 0.02em;
+    }
+
+    .page-header .subtitle {
+      color: rgba(255,255,255,0.38);
+      font-size: 0.82rem;
+      max-width: 520px;
+      margin: 0 auto;
+      line-height: 1.9;
+    }
+
+    /* ─── TOC ─────────────────────────────────────────────── */
+
+    .toc {
+      display: flex;
+      gap: 4px 0px;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 26px 8%;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+
+    .toc a {
+      font-size: 0.67rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: rgba(255,255,255,0.35);
+      transition: color 0.2s;
+      padding: 5px 14px;
+    }
+
+    .toc a:hover { color: var(--gold); }
+
+    .toc-sep {
+      color: rgba(255,255,255,0.12);
+      display: flex;
+      align-items: center;
+      font-size: 0.6rem;
+    }
+
+    /* ─── Comparison Block ────────────────────────────────── */
+
+    .comparison {
+      padding: 80px 5%;
+      border-bottom: 1px solid rgba(255,255,255,0.055);
+    }
+
+    .comparison-header {
+      text-align: center;
+      margin-bottom: 52px;
+    }
+
+    .comparison-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      border: 1px solid rgba(184,149,91,0.35);
+      color: var(--gold);
+      font-size: 0.62rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      margin-bottom: 18px;
+    }
+
+    .comparison-header h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 400;
+      color: white;
+      margin-bottom: 10px;
+    }
+
+    .comparison-header p {
+      color: rgba(255,255,255,0.35);
+      font-size: 0.78rem;
+      letter-spacing: 0.02em;
+      max-width: 520px;
+      margin: 0 auto;
+      line-height: 1.85;
+    }
+
+    /* ─── Panels ──────────────────────────────────────────── */
+
+    .panels {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      align-items: start;
+    }
+
+    .panel-wrap {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .panel-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 14px;
+      font-size: 0.62rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-weight: 600;
+      margin-bottom: 8px;
+      align-self: flex-start;
+    }
+
+    .before .panel-badge {
+      color: #c07878;
+      border: 1px solid rgba(192,120,120,0.22);
+    }
+
+    .after .panel-badge {
+      color: var(--gold);
+      border: 1px solid rgba(184,149,91,0.32);
+    }
+
+    .panel-badge::before {
+      content: '';
+      display: block;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .before .panel-badge::before { background: #c07878; }
+    .after .panel-badge::before { background: var(--gold); }
+
+    .panel-inner {
+      border: 1px solid;
+      overflow: hidden;
+    }
+
+    .before .panel-inner { border-color: rgba(192,120,120,0.18); }
+    .after  .panel-inner { border-color: rgba(184,149,91,0.22); }
+
+    .code-note {
+      padding: 11px 18px;
+      font-size: 0.62rem;
+      font-family: 'Courier New', monospace;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .before .code-note { background: #14120f; color: rgba(192,120,120,0.55); }
+    .after  .code-note { background: #14120f; color: rgba(184,149,91,0.5); }
+
+    /* ─── 1: Navigation ───────────────────────────────────── */
+
+    .nav-demo {
+      padding: 28px 5%;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      background: rgba(17,17,15,0.97);
+      gap: 12px;
+    }
+
+    .logo-before .wordmark {
+      display: block;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      letter-spacing: 12px; /* OLD: fixed px — breaks at any size */
+      line-height: 1;
+      color: white;
+    }
+    .logo-before .sub {
+      display: block;
+      font-size: 0.65rem;
+      letter-spacing: 6px; /* OLD */
+      color: rgba(255,255,255,0.65);
+      margin-top: 6px;
+      text-align: center;
+    }
+
+    .logo-after .wordmark {
+      display: block;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.75rem;
+      letter-spacing: 0.32em; /* NEW: relative, scales correctly */
+      line-height: 1;
+      color: white;
+    }
+    .logo-after .sub {
+      display: block;
+      font-size: 0.68rem;
+      letter-spacing: 0.22em; /* NEW */
+      color: rgba(255,255,255,0.85);
+      margin-top: 7px;
+      text-align: center;
+    }
+
+    .nav-links-before {
+      display: flex;
+      gap: 18px;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: rgba(255,255,255,0.85);
+      padding-top: 3px;
+      /* no hover states */
+    }
+
+    .nav-links-after {
+      display: flex;
+      gap: 30px;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: white;
+      padding-top: 4px;
+    }
+
+    .nav-links-after a {
+      position: relative;
+      opacity: 0.85;
+    }
+    /* Show "Services" as hovered for the demo */
+    .nav-links-after .hovered {
+      opacity: 1;
+    }
+    .nav-links-after .hovered::after {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: rgba(255,255,255,0.7);
+    }
+
+    .cta-before {
+      border: 1px solid rgba(255,255,255,0.6);
+      padding: 13px 20px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: white;
+      white-space: nowrap;
+      /* no hover */
+    }
+
+    .cta-after {
+      border: 1px solid white;
+      padding: 12px 20px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      /* Show hovered state */
+      background: white;
+      color: #11110f;
+      white-space: nowrap;
+    }
+
+    .hover-label {
+      font-size: 0.58rem;
+      color: rgba(184,149,91,0.6);
+      letter-spacing: 0.1em;
+      display: block;
+      text-align: right;
+      margin-top: 4px;
+      font-style: italic;
+    }
+
+    /* ─── 2: Hero Typography ──────────────────────────────── */
+
+    .hero-demo {
+      padding: 48px 40px 36px;
+      background:
+        linear-gradient(to right, rgba(17,17,15,0.9) 0%, rgba(17,17,15,0.6) 55%, rgba(17,17,15,0.12) 100%),
+        url('http://localhost:3000/hero2.jpg') center right / cover,
+        linear-gradient(135deg, #2a261e 0%, #1a1710 100%);
+    }
+
+    .h1-before {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.4rem;
+      line-height: 0.95; /* OLD — lines crash */
+      font-weight: 400;
+      color: white;
+      max-width: 420px;
+    }
+
+    .h1-after {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.2rem;
+      line-height: 1.08; /* NEW — lines breathe */
+      font-weight: 400;
+      color: white;
+      max-width: 420px;
+    }
+
+    .h1-before em, .h1-after em {
+      color: var(--gold);
+      font-style: italic;
+    }
+
+    .lh-tag {
+      display: inline-flex;
+      margin-top: 18px;
+      font-size: 0.6rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      padding: 4px 10px;
+      font-weight: 600;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .lh-tag.bad  { background: rgba(192,120,120,0.14); border: 1px solid rgba(192,120,120,0.28); color: #c07878; }
+    .lh-tag.good { background: rgba(184,149,91,0.12);  border: 1px solid rgba(184,149,91,0.28);  color: var(--gold); }
+
+    /* ─── 3: Buttons ──────────────────────────────────────── */
+
+    .btn-demo {
+      background: #1c1a16;
+      padding: 44px 36px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .btn-label {
+      font-size: 0.62rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: rgba(255,255,255,0.3);
+      margin-bottom: -8px;
+    }
+
+    .btn-g-before {
+      display: inline-flex;
+      align-items: center;
+      gap: 28px; /* OLD */
+      padding: 20px 34px;
+      background: var(--gold);
+      color: white;
+      font-size: 0.73rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-weight: 600;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .btn-g-after {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px; /* NEW */
+      padding: 18px 32px;
+      background: #a6834d; /* darkened — hover state shown */
+      color: white;
+      font-size: 0.73rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-weight: 600;
+      font-family: 'Inter', sans-serif;
+      box-shadow: 0 4px 20px rgba(184,149,91,0.35);
+    }
+
+    .btn-d-before {
+      display: inline-flex;
+      align-items: center;
+      gap: 28px; /* OLD */
+      padding: 20px 34px;
+      background: var(--black);
+      color: white;
+      font-size: 0.73rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-weight: 600;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .btn-d-after {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px; /* NEW */
+      padding: 18px 32px;
+      background: #2a2820; /* darkened — hover state shown */
+      color: white;
+      font-size: 0.73rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-weight: 600;
+      font-family: 'Inter', sans-serif;
+      box-shadow: 0 4px 20px rgba(17,17,15,0.28);
+    }
+
+    .btn-footnote {
+      font-size: 0.68rem;
+      font-style: italic;
+      line-height: 1.7;
+    }
+    .btn-footnote.bad  { color: rgba(192,120,120,0.55); }
+    .btn-footnote.good { color: rgba(184,149,91,0.5);   }
+
+    /* ─── 4: Contact ──────────────────────────────────────── */
+
+    .contact-before {
+      background: var(--cream);
+      padding: 44px 4%;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr 0.8fr;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .contact-before h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      font-weight: 400;
+      line-height: 1.05;
+      color: var(--text);
+    }
+
+    .contact-before > p {
+      color: var(--muted);
+      font-size: 0.85rem;
+      line-height: 1.8;
+    }
+
+    .contact-after {
+      background: var(--cream);
+      padding: 60px 4%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 18px;
+    }
+
+    .contact-after h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.2rem;
+      font-weight: 400;
+      line-height: 1.1;
+      color: var(--text);
+      max-width: 340px;
+    }
+
+    .contact-after h2 em {
+      color: var(--gold);
+      font-style: italic;
+    }
+
+    .contact-after > p {
+      color: var(--muted);
+      font-size: 0.85rem;
+      line-height: 1.8;
+      max-width: 280px;
+    }
+
+    .c-btn-before {
+      display: inline-flex;
+      gap: 28px;
+      align-items: center;
+      padding: 16px 24px;
+      background: var(--black);
+      color: white;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.13em;
+      font-weight: 600;
+      font-family: 'Inter', sans-serif;
+      white-space: nowrap;
+    }
+
+    .c-btn-after {
+      display: inline-flex;
+      gap: 14px;
+      align-items: center;
+      padding: 16px 28px;
+      background: var(--black);
+      color: white;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.13em;
+      font-weight: 600;
+      font-family: 'Inter', sans-serif;
+      margin-top: 6px;
+    }
+
+    /* ─── 5: Intro / Gold Rule ─────────────────────────────── */
+
+    .intro-before {
+      background: var(--ivory);
+      padding: 56px 8%;
+      text-align: center;
+    }
+
+    .intro-before h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.4rem;
+      font-weight: 400;
+      line-height: 1; /* OLD */
+      color: var(--text);
+      margin-bottom: 22px;
+    }
+
+    .intro-before h2 em { color: var(--gold); font-style: italic; }
+
+    .intro-before p {
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.9;
+      max-width: 580px;
+      margin: 0 auto;
+    }
+
+    .intro-after {
+      background: var(--ivory);
+      padding: 56px 8%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .gold-rule {
+      width: 44px;
+      height: 1px;
+      background: var(--gold);
+      margin-bottom: 32px;
+      opacity: 0.75;
+    }
+
+    .intro-after h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.4rem;
+      font-weight: 400;
+      line-height: 1.12; /* NEW */
+      color: var(--text);
+      margin-bottom: 22px;
+      max-width: 560px;
+    }
+
+    .intro-after h2 em { color: var(--gold); font-style: italic; }
+
+    .intro-after p {
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.9;
+      max-width: 520px;
+    }
+
+    /* ─── 6: Testimonial ──────────────────────────────────── */
+
+    .testi-demo {
+      min-height: 360px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 50px 6%;
+      background:
+        linear-gradient(to right, rgba(17,17,15,0.04), rgba(17,17,15,0.78)),
+        url('http://localhost:3000/home-interior.png') center / cover,
+        linear-gradient(135deg, #2e2a20 0%, #1c1812 100%);
+    }
+
+    .testi-block {
+      max-width: 340px;
+      color: white;
+    }
+
+    .testi-block p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.75rem;
+      line-height: 1.08;
+    }
+
+    .testi-block .attrib {
+      display: block;
+      margin-top: 22px;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-weight: 600;
+      font-size: 0.68rem;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .quote-mark-decor {
+      display: block;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 7.5rem;
+      color: var(--gold);
+      line-height: 0.52;
+      margin-bottom: 18px;
+      opacity: 0.75;
+      font-style: italic;
+      user-select: none;
+    }
+
+    /* ─── 7: Mobile Menu ──────────────────────────────────── */
+
+    .mobile-before-wrap {
+      background: rgba(17,17,15,0.97);
+      min-height: 340px;
+      display: flex;
+      flex-direction: column;
+      padding: 28px 6%;
+      position: relative;
+    }
+
+    .mob-nav-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .mob-logo .wordmark {
+      display: block;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      letter-spacing: 0.32em;
+      color: white;
+      line-height: 1;
+    }
+    .mob-logo .sub {
+      display: block;
+      font-size: 0.62rem;
+      letter-spacing: 0.2em;
+      color: rgba(255,255,255,0.7);
+      margin-top: 6px;
+    }
+
+    .no-nav-box {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -30%);
+      text-align: center;
+      color: rgba(192,120,120,0.5);
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      border: 1px dashed rgba(192,120,120,0.2);
+      padding: 24px 36px;
+      line-height: 1.9;
+    }
+
+    .hamburger-icon {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      width: 26px;
+      cursor: pointer;
+    }
+    .hamburger-icon span {
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: white;
+    }
+
+    /* Hamburger open state — X */
+    .hamburger-open span:nth-child(1) { transform: translateY(6px) rotate(45deg); transform-origin: center; }
+    .hamburger-open span:nth-child(2) { opacity: 0; }
+    .hamburger-open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); transform-origin: center; }
+
+    .mobile-menu-overlay {
+      background: var(--black);
+      min-height: 340px;
+      display: flex;
+      flex-direction: column;
+      padding: 28px 6% 40px;
+    }
+
+    .mob-menu-links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 26px;
+      margin-top: 36px;
+      flex: 1;
+      justify-content: center;
+    }
+
+    .mob-menu-links a {
+      font-size: 0.73rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: rgba(255,255,255,0.65);
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+    }
+
+    .mob-menu-cta {
+      margin-top: 14px;
+      border: 1px solid rgba(184,149,91,0.5) !important;
+      color: var(--gold) !important;
+      padding: 12px 28px;
+    }
+
+    /* ─── Summary Grid ────────────────────────────────────── */
+
+    .summary {
+      padding: 80px 6%;
+      text-align: center;
+      background: linear-gradient(180deg, transparent 0%, rgba(184,149,91,0.03) 100%);
+    }
+
+    .summary > .eyebrow { margin-bottom: 14px; }
+
+    .summary h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.2rem;
+      font-weight: 400;
+      color: white;
+      margin-bottom: 50px;
+    }
+
+    .changes-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .change-card {
+      border: 1px solid rgba(184,149,91,0.12);
+      padding: 28px 22px;
+      text-align: left;
+      background: rgba(255,255,255,0.015);
+    }
+
+    .change-card .num {
+      display: block;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      color: var(--gold);
+      opacity: 0.35;
+      line-height: 1;
+      margin-bottom: 14px;
+    }
+
+    .change-card h3 {
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .change-card p {
+      font-size: 0.73rem;
+      color: rgba(255,255,255,0.32);
+      line-height: 1.75;
+    }
+
+    .page-footer {
+      text-align: center;
+      padding: 40px;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: rgba(255,255,255,0.15);
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- ─── Header ─────────────────────────────────────────── -->
+
+  <div class="page-header">
+    <span class="eyebrow">Velvet Concierge Care — Design Audit</span>
+    <h1>Before &amp; After</h1>
+    <p class="subtitle">A visual comparison of every design change made — same content, same brand, rebuilt with craft.</p>
+  </div>
+
+  <nav class="toc">
+    <a href="#c1">01 Navigation &amp; Logo</a>
+    <span class="toc-sep">·</span>
+    <a href="#c2">02 Hero Typography</a>
+    <span class="toc-sep">·</span>
+    <a href="#c3">03 Buttons</a>
+    <span class="toc-sep">·</span>
+    <a href="#c4">04 Contact Section</a>
+    <span class="toc-sep">·</span>
+    <a href="#c5">05 Intro &amp; Spacing</a>
+    <span class="toc-sep">·</span>
+    <a href="#c6">06 Testimonial</a>
+    <span class="toc-sep">·</span>
+    <a href="#c7">07 Mobile Menu</a>
+    <span class="toc-sep">·</span>
+    <a href="#c8">08 Intro Layout</a>
+    <span class="toc-sep">·</span>
+    <a href="#c9">09 Difference Numerals</a>
+    <span class="toc-sep">·</span>
+    <a href="#c10">10 Pause Section</a>
+  </nav>
+
+
+  <!-- ─── 01: Navigation & Logo ──────────────────────────── -->
+
+  <div class="comparison" id="c1">
+    <div class="comparison-header">
+      <div class="comparison-number">01</div>
+      <h2>Navigation &amp; Logo</h2>
+      <p>Logo letter-spacing changed from a fixed <code>12px</code> to a relative <code>0.32em</code>. Nav links gained underline hover animations. The CTA button now fills on hover — shown in the After panel.</p>
+    </div>
+    <div class="panels">
+
+      <div class="panel-wrap before">
+        <div class="panel-badge">Before</div>
+        <div class="panel-inner">
+          <div class="nav-demo">
+            <div class="logo-before">
+              <span class="wordmark">VELVET</span>
+              <span class="sub">CONCIERGE CARE</span>
+            </div>
+            <div class="nav-links-before">
+              <span>Services</span>
+              <span>Who We Help</span>
+              <span>About</span>
+              <span>FAQ</span>
+            </div>
+            <div class="cta-before">Schedule a Conversation</div>
+          </div>
+          <div class="code-note">letter-spacing: 12px (fixed) &nbsp;·&nbsp; no hover states &nbsp;·&nbsp; static button</div>
+        </div>
+      </div>
+
+      <div class="panel-wrap after">
+        <div class="panel-badge">After</div>
+        <div class="panel-inner">
+          <div class="nav-demo">
+            <div class="logo-after">
+              <span class="wordmark">VELVET</span>
+              <span class="sub">CONCIERGE CARE</span>
+            </div>
+            <div class="nav-links-after">
+              <a class="hovered">Services</a>
+              <a>Who We Help</a>
+              <a>About</a>
+              <a>FAQ</a>
+            </div>
+            <div>
+              <div class="cta-after">Schedule a Conversation</div>
+              <span class="hover-label">↑ hover state shown</span>
+            </div>
+          </div>
+          <div class="code-note">letter-spacing: 0.32em (relative) &nbsp;·&nbsp; underline on hover &nbsp;·&nbsp; button fills white</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ─── 02: Hero Typography ────────────────────────────── -->
+
+  <div class="comparison" id="c2">
+    <div class="comparison-header">
+      <div class="comparison-number">02</div>
+      <h2>Hero Heading Typography</h2>
+      <p>A single property change. <code>line-height: 0.95</code> causes descenders from one line to collide with ascenders of the next — a common AI tell. Changed to <code>1.08</code>, the correct value for large display serifs.</p>
+    </div>
+    <div class="panels">
+
+      <div class="panel-wrap before">
+        <div class="panel-badge">Before — line-height: 0.95</div>
+        <div class="panel-inner">
+          <div class="hero-demo">
+            <h1 class="h1-before">The comfort of home. The confidence of <em>nursing expertise.</em></h1>
+            <span class="lh-tag bad">Lines collide — descenders hit ascenders</span>
+          </div>
+          <div class="code-note">line-height: 0.95 &nbsp;·&nbsp; font-size: clamp(3.4rem, 6.2vw, 6.6rem)</div>
+        </div>
+      </div>
+
+      <div class="panel-wrap after">
+        <div class="panel-badge">After — line-height: 1.08</div>
+        <div class="panel-inner">
+          <div class="hero-demo">
+            <h1 class="h1-after">The comfort of home. The confidence of <em>nursing expertise.</em></h1>
+            <span class="lh-tag good">Lines breathe — correct for display serif type</span>
+          </div>
+          <div class="code-note">line-height: 1.08 &nbsp;·&nbsp; font-size: clamp(3.2rem, 5.8vw, 6.2rem)</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ─── 03: Buttons ────────────────────────────────────── -->
+
+  <div class="comparison" id="c3">
+    <div class="comparison-header">
+      <div class="comparison-number">03</div>
+      <h2>Button Design &amp; Hover States</h2>
+      <p>The gap between button text and arrow went from <code>28px</code> to <code>14px</code>. A gap of 28px makes the arrow feel detached — like a placeholder nobody adjusted. Both buttons now have hover states with transitions. Hover state is shown in the After panel.</p>
+    </div>
+    <div class="panels">
+
+      <div class="panel-wrap before">
+        <div class="panel-badge">Before — gap: 28px, no hover</div>
+        <div class="panel-inner">
+          <div class="btn-demo">
+            <span class="btn-label">Gold button</span>
+            <div class="btn-g-before">SCHEDULE A CONVERSATION <span>→</span></div>
+            <span class="btn-label">Dark button</span>
+            <div class="btn-d-before">SCHEDULE A CONVERSATION <span>→</span></div>
+            <p class="btn-footnote bad">The arrow is almost disconnected from the text. Looks like a template nobody finished. No visual feedback on hover — cursor does nothing.</p>
+          </div>
+          <div class="code-note">gap: 28px &nbsp;·&nbsp; no transition &nbsp;·&nbsp; no hover state</div>
+        </div>
+      </div>
+
+      <div class="panel-wrap after">
+        <div class="panel-badge">After — gap: 14px, hover shown</div>
+        <div class="panel-inner">
+          <div class="btn-demo">
+            <span class="btn-label">Gold button (hover)</span>
+            <div class="btn-g-after">SCHEDULE A CONVERSATION <span>→</span></div>
+            <span class="btn-label">Dark button (hover)</span>
+            <div class="btn-d-after">SCHEDULE A CONVERSATION <span>→</span></div>
+            <p class="btn-footnote good">Arrow sits tightly next to text — they read as one unit. On hover: background darkens + soft shadow lifts the button. transition: 0.22s ease.</p>
+          </div>
+          <div class="code-note">gap: 14px &nbsp;·&nbsp; transition: 0.22s ease &nbsp;·&nbsp; box-shadow on hover</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ─── 04: Contact Section ────────────────────────────── -->
+
+  <div class="comparison" id="c4">
+    <div class="comparison-header">
+      <div class="comparison-number">04</div>
+      <h2>Contact Section Layout</h2>
+      <p>The most structurally broken section on the site. Three separate elements each isolated in their own grid column — a heading alone, a sentence alone, a button alone. Rebuilt as a centered flex column where everything relates to a single axis.</p>
+    </div>
+    <div class="panels">
+
+      <div class="panel-wrap before">
+        <div class="panel-badge">Before — 3-column grid</div>
+        <div class="panel-inner">
+          <div class="contact-before">
+            <div>
+              <h2>Let's talk about how we can help.</h2>
+            </div>
+            <p>Every family's situation is different. We'd love to learn about yours.</p>
+            <div class="c-btn-before">SCHEDULE A CONVERSATION <span>→</span></div>
+          </div>
+          <div class="code-note">grid-template-columns: 1.2fr 1fr 0.8fr &nbsp;·&nbsp; heading / text / button each in own column</div>
+        </div>
+      </div>
+
+      <div class="panel-wrap after">
+        <div class="panel-badge">After — centered flex column</div>
+        <div class="panel-inner">
+          <div class="contact-after">
+            <h2>Let's talk about<br><em>how we can help.</em></h2>
+            <p>Every family's situation is different. We'd love to learn about yours.</p>
+            <div class="c-btn-after">SCHEDULE A CONVERSATION <span>→</span></div>
+          </div>
+          <div class="code-note">display: flex; flex-direction: column; align-items: center &nbsp;·&nbsp; gap: 24px</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ─── 05: Intro Spacing ──────────────────────────────── -->
+
+  <div class="comparison" id="c5">
+    <div class="comparison-header">
+      <div class="comparison-number">05</div>
+      <h2>Intro Section — Spacing &amp; Gold Rule</h2>
+      <p>Before: centered text floating on ivory with no visual entry point. After: a 44×1px gold hairline above the heading gives the section an anchor. Heading <code>line-height</code> also corrected from <code>1.0</code> to <code>1.12</code>. Section padding increased for a more intentional pause.</p>
+    </div>
+    <div class="panels">
+
+      <div class="panel-wrap before">
+        <div class="panel-badge">Before — no visual anchor</div>
+        <div class="panel-inner">
+          <div class="intro-before">
+            <h2>Home is where life happens.<br><em>We're here to help you live it well.</em></h2>
+            <p>Whether you're aging at home, recovering from surgery or illness, or simply need an extra hand, we provide personalized support so you and your family can focus on what matters most.</p>
+          </div>
+          <div class="code-note">padding: 90px 8% &nbsp;·&nbsp; line-height: 1 &nbsp;·&nbsp; no entry element — section just starts</div>
+        </div>
+      </div>
+
+      <div class="panel-wrap after">
+        <div class="panel-badge">After — gold hairline rule</div>
+        <div class="panel-inner">
+          <div class="intro-after">
+            <div class="gold-rule"></div>
+            <h2>Home is where life happens.<br><em>We're here to help you live it well.</em></h2>
+            <p>Whether you're aging at home, recovering from surgery or illness, or simply need an extra hand, we provide personalized support so you and your family can focus on what matters most.</p>
+          </div>
+          <div class="code-note">padding: 120px 8% 130px &nbsp;·&nbsp; line-height: 1.12 &nbsp;·&nbsp; 44×1px gold rule, opacity 0.75</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ─── 06: Testimonial ────────────────────────────────── -->
+
+  <div class="comparison" id="c6">
+    <div class="comparison-header">
+      <div class="comparison-number">06</div>
+      <h2>Testimonial — Decorative Quote Mark</h2>
+      <p>Without the quote mark, the text reads as a plain paragraph floating on a photo. The large typographic <em style="color: var(--gold); font-family: 'Cormorant Garamond', serif; font-size: 1.1em">"</em> at 8rem transforms it into an intentional design element — standard on luxury brand and private practice sites.</p>
+    </div>
+    <div class="panels">
+
+      <div class="panel-wrap before">
+        <div class="panel-badge">Before — no quote mark</div>
+        <div class="panel-inner">
+          <div class="testi-demo">
+            <div class="testi-block">
+              <p>We believe peace of mind begins with knowing someone thoughtful, capable, and attentive is there when your family needs support.</p>
+              <span class="attrib">— The Velvet Concierge Care Team</span>
+            </div>
+          </div>
+          <div class="code-note">text begins abruptly &nbsp;·&nbsp; reads as a paragraph, not a design element</div>
+        </div>
+      </div>
+
+      <div class="panel-wrap after">
+        <div class="panel-badge">After — decorative gold mark</div>
+        <div class="panel-inner">
+          <div class="testi-demo">
+            <div class="testi-block">
+              <span class="quote-mark-decor">&ldquo;</span>
+              <p>We believe peace of mind begins with knowing someone thoughtful, capable, and attentive is there when your family needs support.</p>
+              <span class="attrib">— The Velvet Concierge Care Team</span>
+            </div>
+          </div>
+          <div class="code-note">font-size: 8rem &nbsp;·&nbsp; line-height: 0.55 &nbsp;·&nbsp; color: var(--gold) &nbsp;·&nbsp; opacity: 0.75</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ─── 07: Mobile Menu ────────────────────────────────── -->
+
+  <div class="comparison" id="c7">
+    <div class="comparison-header">
+      <div class="comparison-number">07</div>
+      <h2>Mobile Navigation</h2>
+      <p>At under 1000px, the nav links were set to <code>display: none</code> with no fallback. Mobile visitors saw a logo and nothing else — no way to navigate. Now a hamburger icon appears, and clicking it opens a full-screen overlay. Hamburger shown in the open (X) state to demonstrate the animation.</p>
+    </div>
+    <div class="panels">
+
+      <div class="panel-wrap before">
+        <div class="panel-badge">Before — navigation vanishes</div>
+        <div class="panel-inner">
+          <div class="mobile-before-wrap">
+            <div class="mob-nav-bar">
+              <div class="mob-logo">
+                <span class="wordmark">VELVET</span>
+                <span class="sub">CONCIERGE CARE</span>
+              </div>
+              <!-- nothing else — nav hidden, no hamburger -->
+            </div>
+            <div class="no-nav-box">
+              Nav hidden — display: none<br>
+              <span style="font-size: 0.6rem; opacity: 0.7; display: block; margin-top: 6px;">No hamburger. No overlay. No fallback.<br>Mobile visitor is stranded.</span>
+            </div>
+          </div>
+          <div class="code-note">.nav nav, .navCta { display: none } &nbsp;·&nbsp; no mobile alternative</div>
+        </div>
+      </div>
+
+      <div class="panel-wrap after">
+        <div class="panel-badge">After — hamburger + full overlay (open state shown)</div>
+        <div class="panel-inner">
+          <div class="mobile-menu-overlay">
+            <div class="mob-nav-bar">
+              <div class="mob-logo">
+                <span class="wordmark">VELVET</span>
+                <span class="sub">CONCIERGE CARE</span>
+              </div>
+              <!-- X state — menu is open -->
+              <div class="hamburger-icon hamburger-open">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <div class="mob-menu-links">
+              <a>Services</a>
+              <a>Who We Help</a>
+              <a>About</a>
+              <a>FAQ</a>
+              <a>Contact</a>
+              <a class="mob-menu-cta">Schedule a Conversation</a>
+            </div>
+          </div>
+          <div class="code-note">useState toggle &nbsp;·&nbsp; position: fixed; inset: 0 &nbsp;·&nbsp; hamburger animates to X</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ─── 08: Intro Section ────────────────────────────────── -->
+
+  <div class="comparison" id="c8">
+    <div class="comparison-header">
+      <div class="comparison-number">08</div>
+      <h2>Intro Section — Editorial Layout</h2>
+      <p>The most generic layout on the internet: centered heading + centered paragraph on white. Replaced with a two-column grid — heading anchored by a gold vertical rule on the left, body text balanced on the right. Content now has tension and direction.</p>
+    </div>
+    <div class="panels">
+
+      <div class="panel-wrap before">
+        <div class="panel-badge">Before — centered stack</div>
+        <div class="panel-inner">
+          <div style="background: #fbf8f1; padding: 60px 8%; text-align: center; display: flex; flex-direction: column; align-items: center;">
+            <div style="width: 44px; height: 1px; background: #b8955b; margin-bottom: 32px; opacity: 0.75;"></div>
+            <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; font-weight: 400; line-height: 1.12; color: #221f1a; margin-bottom: 22px; max-width: 560px;">
+              Home is where life happens.<br><em style="color: #b8955b; font-style: italic;">We're here to help you live it well.</em>
+            </h2>
+            <p style="color: #6d655b; font-size: 0.95rem; line-height: 1.9; max-width: 520px;">
+              Whether you're aging at home, recovering from surgery or illness, or simply need an extra hand, we provide personalized support so you and your family can focus on what matters most.
+            </p>
+          </div>
+          <div class="code-note">centered flex column · everything on one axis · no visual tension</div>
+        </div>
+      </div>
+
+      <div class="panel-wrap after">
+        <div class="panel-badge">After — two-column editorial</div>
+        <div class="panel-inner">
+          <div style="background: radial-gradient(ellipse 70% 60% at 100% 100%, rgba(184,149,91,0.06) 0%, transparent 70%), #fbf8f1; padding: 60px 8%; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
+            <div style="padding-left: 28px; border-left: 1px solid rgba(184,149,91,0.45);">
+              <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 400; line-height: 1.12; color: #221f1a;">
+                Home is where life happens. <em style="color: #b8955b; font-style: italic;">We're here to help you live it well.</em>
+              </h2>
+            </div>
+            <div>
+              <p style="color: #6d655b; font-size: 0.95rem; line-height: 1.9;">
+                Whether you're aging at home, recovering from surgery or illness, or simply need an extra hand, we provide personalized support so you and your family can focus on what matters most.
+              </p>
+            </div>
+          </div>
+          <div class="code-note">grid: 1fr 1fr · border-left gold rule · heading and text in visual tension</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ─── 09: Difference Numerals ──────────────────────────── -->
+
+  <div class="comparison" id="c9">
+    <div class="comparison-header">
+      <div class="comparison-number">09</div>
+      <h2>Difference Section — Numbered Items</h2>
+      <p>Three identically-formatted items with tiny <code>0.72rem</code> uppercase labels. Nothing creates visual hierarchy within the list. Replaced with large faded Cormorant numerals — <em style="color: var(--gold); font-family: 'Cormorant Garamond', serif;">01, 02, 03</em> — that give each item weight and lead the eye naturally down the column.</p>
+    </div>
+    <div class="panels">
+
+      <div class="panel-wrap before">
+        <div class="panel-badge">Before — uniform uppercase labels</div>
+        <div class="panel-inner">
+          <div style="background: #11110f; padding: 60px 44px; display: flex; flex-direction: column; gap: 36px;">
+            <div>
+              <h3 style="text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.72rem; font-weight: 600; color: rgba(255,255,255,0.9); margin-bottom: 10px; font-family: 'Inter', sans-serif;">RN-Led Oversight</h3>
+              <p style="color: #b8b0a6; line-height: 1.75; font-size: 0.95rem;">Registered Nurse expertise guiding every care plan and decision.</p>
+            </div>
+            <div>
+              <h3 style="text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.72rem; font-weight: 600; color: rgba(255,255,255,0.9); margin-bottom: 10px; font-family: 'Inter', sans-serif;">Personalized Support</h3>
+              <p style="color: #b8b0a6; line-height: 1.75; font-size: 0.95rem;">Care tailored to your unique needs, preferences, and lifestyle.</p>
+            </div>
+            <div>
+              <h3 style="text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.72rem; font-weight: 600; color: rgba(255,255,255,0.9); margin-bottom: 10px; font-family: 'Inter', sans-serif;">Clear Communication</h3>
+              <p style="color: #b8b0a6; line-height: 1.75; font-size: 0.95rem;">We keep you informed and involved every step of the way.</p>
+            </div>
+          </div>
+          <div class="code-note">h3 labels at 0.72rem · identical weight on all three items · no hierarchy</div>
+        </div>
+      </div>
+
+      <div class="panel-wrap after">
+        <div class="panel-badge">After — large faded numerals</div>
+        <div class="panel-inner">
+          <div style="background: #11110f; padding: 60px 44px; display: flex; flex-direction: column; gap: 40px;">
+            <div style="display: flex; gap: 20px; align-items: flex-start;">
+              <span style="font-family: 'Cormorant Garamond', serif; font-size: 3rem; color: #b8955b; opacity: 0.28; line-height: 0.85; font-weight: 400; flex-shrink: 0; width: 44px; user-select: none;">01</span>
+              <div>
+                <h3 style="text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.72rem; font-weight: 600; color: rgba(255,255,255,0.9); margin-bottom: 10px; font-family: 'Inter', sans-serif;">RN-Led Oversight</h3>
+                <p style="color: #b8b0a6; line-height: 1.75; font-size: 0.95rem;">Registered Nurse expertise guiding every care plan and decision.</p>
+              </div>
+            </div>
+            <div style="display: flex; gap: 20px; align-items: flex-start;">
+              <span style="font-family: 'Cormorant Garamond', serif; font-size: 3rem; color: #b8955b; opacity: 0.28; line-height: 0.85; font-weight: 400; flex-shrink: 0; width: 44px; user-select: none;">02</span>
+              <div>
+                <h3 style="text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.72rem; font-weight: 600; color: rgba(255,255,255,0.9); margin-bottom: 10px; font-family: 'Inter', sans-serif;">Personalized Support</h3>
+                <p style="color: #b8b0a6; line-height: 1.75; font-size: 0.95rem;">Care tailored to your unique needs, preferences, and lifestyle.</p>
+              </div>
+            </div>
+            <div style="display: flex; gap: 20px; align-items: flex-start;">
+              <span style="font-family: 'Cormorant Garamond', serif; font-size: 3rem; color: #b8955b; opacity: 0.28; line-height: 0.85; font-weight: 400; flex-shrink: 0; width: 44px; user-select: none;">03</span>
+              <div>
+                <h3 style="text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.72rem; font-weight: 600; color: rgba(255,255,255,0.9); margin-bottom: 10px; font-family: 'Inter', sans-serif;">Clear Communication</h3>
+                <p style="color: #b8b0a6; line-height: 1.75; font-size: 0.95rem;">We keep you informed and involved every step of the way.</p>
+              </div>
+            </div>
+          </div>
+          <div class="code-note">3rem Cormorant · opacity: 0.28 · creates editorial hierarchy without adding noise</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ─── 10: Pause Section ─────────────────────────────────── -->
+
+  <div class="comparison" id="c10">
+    <div class="comparison-header">
+      <div class="comparison-number">10</div>
+      <h2>Pause Section — Editorial Statement</h2>
+      <p>This section didn't exist. Every section had the same visual weight — nothing stopped the scroll, nothing made you feel anything. One sentence, large type, its own space. The page now has a moment that earns the contact section below it.</p>
+    </div>
+    <div class="panels">
+
+      <div class="panel-wrap before">
+        <div class="panel-badge">Before — doesn't exist</div>
+        <div class="panel-inner">
+          <div style="background: #1a1815; min-height: 240px; display: flex; align-items: center; justify-content: center; padding: 60px 8%;">
+            <div style="text-align: center; color: rgba(192,120,120,0.4); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.18em; border: 1px dashed rgba(192,120,120,0.18); padding: 28px 44px; line-height: 1.9;">
+              No pause moment.<br>
+              <span style="font-size: 0.6rem; opacity: 0.7;">The page went directly from the dark Difference section into the Contact section. No breathing room. No statement. Nothing human.</span>
+            </div>
+          </div>
+          <div class="code-note">section didn't exist · difference → contact with no transition</div>
+        </div>
+      </div>
+
+      <div class="panel-wrap after">
+        <div class="panel-badge">After — one sentence, full weight</div>
+        <div class="panel-inner">
+          <div style="background: radial-gradient(ellipse 60% 80% at 0% 50%, rgba(184,149,91,0.05) 0%, transparent 70%), #fbf8f1; padding: 80px 8%; text-align: center;">
+            <p style="font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem, 3.6vw, 3rem); font-weight: 400; color: #221f1a; max-width: 720px; margin: 0 auto; line-height: 1.18;">
+              We don't fit families into care plans. <em style="color: #b8955b; font-style: italic;">We build care plans around families.</em>
+            </p>
+          </div>
+          <div class="code-note">Cormorant · clamp(2rem, 3.6vw, 3.8rem) · radial gold gradient background · stops the scroll</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ─── Summary ───────────────────────────────────────── -->
+
+  <div class="summary">
+    <span class="eyebrow">All Changes</span>
+    <h2>What Was Fixed &amp; Why</h2>
+    <div class="changes-grid">
+      <div class="change-card">
+        <span class="num">01</span>
+        <h3>Logo Letter-Spacing</h3>
+        <p>Fixed 12px → relative 0.32em. At 12px the letters read as scattered. Relative values scale with the font and stay proportional.</p>
+      </div>
+      <div class="change-card">
+        <span class="num">02</span>
+        <h3>Heading Line-Height</h3>
+        <p>0.95 → 1.08–1.12. Sub-1.0 line-height causes physical overlap on large serifs. The correct range for display headings is 1.0–1.15.</p>
+      </div>
+      <div class="change-card">
+        <span class="num">03</span>
+        <h3>Button Arrow Gap</h3>
+        <p>28px → 14px. A gap of 28px on a small button almost doubles the button width. The arrow should feel attached, not like an afterthought.</p>
+      </div>
+      <div class="change-card">
+        <span class="num">04</span>
+        <h3>Button Hover States</h3>
+        <p>No interaction → 0.22s transitions + box-shadow. Static buttons feel broken in 2025. Hover states communicate quality and responsiveness.</p>
+      </div>
+      <div class="change-card">
+        <span class="num">05</span>
+        <h3>Contact Section</h3>
+        <p>3-column grid → centered flex column. Each element was isolated in its own column with nothing relating to anything else. Now they share a visual axis.</p>
+      </div>
+      <div class="change-card">
+        <span class="num">06</span>
+        <h3>Gold Hairline Rule</h3>
+        <p>Nothing → 44×1px gold rule. Sections without visual entry points read as filler. A single line gives the section intention before you read a word.</p>
+      </div>
+      <div class="change-card">
+        <span class="num">07</span>
+        <h3>Decorative Quote Mark</h3>
+        <p>No mark → 8rem gold ". Luxury brands use typographic marks as design elements. Without it, a quote is just text. With it, it's a moment.</p>
+      </div>
+      <div class="change-card">
+        <span class="num">08</span>
+        <h3>Mobile Navigation</h3>
+        <p>Hidden → hamburger + overlay. The single biggest functional failure. Mobile users had no way to navigate the site. Now they have a full menu.</p>
+      </div>
+      <div class="change-card">
+        <span class="num">09</span>
+        <h3>Intro Layout</h3>
+        <p>Centered stack → two-column grid with gold vertical rule. The most generic layout possible became an editorial moment with visual tension.</p>
+      </div>
+      <div class="change-card">
+        <span class="num">10</span>
+        <h3>Difference Numerals</h3>
+        <p>Tiny uppercase labels → large faded 01 02 03 in Cormorant. Three identical items now have hierarchy. Your eye moves through the list naturally.</p>
+      </div>
+      <div class="change-card">
+        <span class="num">11</span>
+        <h3>Pause Section</h3>
+        <p>Didn't exist → one statement, full width, large type. The page needed a moment that stops the scroll. Now it has one before the contact CTA.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    Velvet Concierge Care &nbsp;·&nbsp; Design Comparison &nbsp;·&nbsp; 2026
+  </div>
+
+</body>
+</html>

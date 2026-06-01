@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Velvet — New Page Flow Preview</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    a { text-decoration: none; color: inherit; }
+
+    :root {
+      --black: #11110f;
+      --cream: #f5efe5;
+      --ivory: #fbf8f1;
+      --gold: #b8955b;
+      --text: #221f1a;
+      --muted: #6d655b;
+    }
+
+    body {
+      background: #0c0b09;
+      color: white;
+      font-family: 'Inter', sans-serif;
+    }
+
+    em { color: var(--gold); font-style: italic; }
+
+    /* ─── Page header ─────────────────────────── */
+    .page-header {
+      text-align: center;
+      padding: 80px 8% 60px;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+
+    .eyebrow {
+      display: block;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.24em;
+      color: var(--gold);
+      margin-bottom: 18px;
+    }
+
+    .page-header h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.8rem;
+      font-weight: 400;
+      margin-bottom: 14px;
+    }
+
+    .page-header p {
+      color: rgba(255,255,255,0.38);
+      font-size: 0.85rem;
+      max-width: 500px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+
+    /* ─── Section label ───────────────────────── */
+    .section-label {
+      text-align: center;
+      padding: 64px 8% 48px;
+    }
+
+    .section-label h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      font-weight: 400;
+      margin-bottom: 10px;
+    }
+
+    .section-label p {
+      color: rgba(255,255,255,0.35);
+      font-size: 0.8rem;
+      max-width: 540px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+
+    /* ─── Zone diagram ────────────────────────── */
+    .zone-compare {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      padding: 0 5% 80px;
+    }
+
+    .zone-col h3 {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      margin-bottom: 12px;
+      padding: 8px 16px;
+      font-weight: 600;
+    }
+
+    .zone-col.old h3 { color: #c07878; border: 1px solid rgba(192,120,120,0.2); display: inline-block; }
+    .zone-col.new h3 { color: var(--gold); border: 1px solid rgba(184,149,91,0.3); display: inline-block; }
+
+    .zone-block {
+      padding: 16px 20px;
+      margin-bottom: 3px;
+      font-size: 0.72rem;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .zone-block .tag {
+      font-size: 0.55rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      padding: 3px 8px;
+      border-radius: 2px;
+      flex-shrink: 0;
+      font-weight: 600;
+    }
+
+    .zone-block.dark-zone { background: rgba(17,17,15,0.6); color: rgba(255,255,255,0.7); }
+    .zone-block.dark-zone .tag { background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.5); }
+    .zone-block.light-zone { background: rgba(251,248,241,0.06); color: rgba(255,255,255,0.5); }
+    .zone-block.light-zone .tag { background: rgba(251,248,241,0.08); color: rgba(255,255,255,0.35); }
+    .zone-block.cinematic { background: rgba(17,17,15,0.8); color: rgba(255,255,255,0.8); border-left: 2px solid rgba(184,149,91,0.4); }
+    .zone-block.cinematic .tag { background: rgba(184,149,91,0.12); color: var(--gold); }
+    .zone-block.merged-light { background: rgba(245,239,229,0.07); color: rgba(255,255,255,0.65); border-left: 2px solid rgba(184,149,91,0.3); }
+    .zone-block.merged-light .tag { background: rgba(184,149,91,0.1); color: var(--gold); }
+    .zone-block.removed { opacity: 0.3; text-decoration: line-through; background: rgba(192,120,120,0.05); }
+    .zone-block.removed .tag { color: #c07878; }
+
+    .zone-count {
+      font-size: 0.6rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      margin-top: 12px;
+      padding: 10px 0;
+      border-top: 1px solid rgba(255,255,255,0.07);
+    }
+
+    .zone-col.old .zone-count { color: rgba(192,120,120,0.5); }
+    .zone-col.new .zone-count { color: rgba(184,149,91,0.6); }
+
+    .divider {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      margin: 0;
+    }
+
+    /* ═══════════════════════════════════════════
+       THE ACTUAL PAGE RENDERING
+    ═══════════════════════════════════════════ */
+
+    .preview-label {
+      text-align: center;
+      padding: 60px 8% 40px;
+      background: #0c0b09;
+    }
+
+    .preview-label h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 400;
+      margin-bottom: 10px;
+    }
+
+    .preview-label p {
+      color: rgba(255,255,255,0.35);
+      font-size: 0.8rem;
+    }
+
+    /* Zone 1: Hero (unchanged) */
+    .preview-hero {
+      min-height: 480px;
+      background:
+        linear-gradient(105deg, rgba(17,17,15,0.94) 0%, rgba(17,17,15,0.72) 42%, rgba(17,17,15,0.22) 68%, rgba(17,17,15,0.04) 100%),
+        linear-gradient(to top, rgba(17,17,15,0.5) 0%, transparent 30%),
+        url('http://localhost:3000/hero2.jpg') center right / cover;
+      display: flex;
+      align-items: center;
+      padding: 100px 8% 80px;
+      color: white;
+      position: relative;
+    }
+
+    .preview-hero .eyebrow {
+      color: var(--gold);
+      font-size: 0.68rem;
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    .preview-hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.8rem, 4.5vw, 5.5rem);
+      line-height: 1.06;
+      font-weight: 400;
+      max-width: 580px;
+      margin-bottom: 24px;
+    }
+
+    .preview-hero p {
+      max-width: 400px;
+      font-size: 0.95rem;
+      line-height: 1.85;
+      opacity: 0.75;
+      margin-bottom: 36px;
+    }
+
+    .preview-btn-gold {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      padding: 16px 28px;
+      background: var(--gold);
+      color: white;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-weight: 600;
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* Zone 2: Light — Intro (unchanged) */
+    .preview-intro {
+      background: radial-gradient(ellipse 70% 60% at 100% 100%, rgba(184,149,91,0.06) 0%, transparent 70%), var(--ivory);
+      padding: 90px 8%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .intro-left {
+      padding-left: 28px;
+      border-left: 1px solid rgba(184,149,91,0.45);
+    }
+
+    .intro-left h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.2rem;
+      font-weight: 400;
+      line-height: 1.12;
+      color: var(--text);
+    }
+
+    .intro-right p {
+      color: var(--muted);
+      line-height: 1.95;
+      font-size: 0.95rem;
+    }
+
+    /* ─── THE CINEMATIC ZONE ─────────────────── */
+    /* Key: no gap, no background change, just two
+       beautiful photo moments scrolling together  */
+
+    .cinematic-zone {
+      /* No background — children handle their own */
+    }
+
+    .cinematic-label {
+      background: rgba(184,149,91,0.08);
+      border-top: 1px solid rgba(184,149,91,0.2);
+      border-bottom: 1px solid rgba(184,149,91,0.2);
+      padding: 10px 8%;
+      font-size: 0.6rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--gold);
+      text-align: center;
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* Testimonial — dark photo 1 of 2 */
+    .preview-testimonial {
+      min-height: 520px;
+      background:
+        linear-gradient(to right, rgba(17,17,15,0.04), rgba(17,17,15,0.75)),
+        url('http://localhost:3000/home-interior.png') center / cover,
+        linear-gradient(135deg, #2a261e 0%, #1a1710 100%);
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 70px 8%;
+    }
+
+    .testi-block { max-width: 380px; color: white; }
+
+    .quote-mark {
+      display: block;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 7rem;
+      color: var(--gold);
+      line-height: 0.52;
+      margin-bottom: 16px;
+      opacity: 0.7;
+      font-style: italic;
+    }
+
+    .testi-block p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      line-height: 1.15;
+    }
+
+    .testi-attrib {
+      display: block;
+      margin-top: 24px;
+      color: var(--gold);
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1rem;
+      opacity: 0.85;
+    }
+
+    /* Difference — dark photo 2 of 2 — flows DIRECTLY from testimonial */
+    /* No background color change, no margin, no border */
+    .preview-difference {
+      min-height: 520px;
+      background:
+        linear-gradient(to right, rgba(17,17,15,0.06) 0%, rgba(17,17,15,0.72) 45%, rgba(17,17,15,0.9) 100%),
+        url('http://localhost:3000/hands.png') center / cover,
+        linear-gradient(135deg, #1a1710 0%, #0e0d0b 100%);
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 70px 8%;
+    }
+
+    .diff-content { max-width: 460px; color: white; }
+
+    .diff-content .site-eyebrow {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.7rem;
+      font-weight: 600;
+      font-family: 'Inter', sans-serif;
+      margin-bottom: 18px;
+      display: block;
+    }
+
+    .diff-content h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.4rem;
+      line-height: 1.1;
+      font-weight: 400;
+      margin-bottom: 36px;
+    }
+
+    .diff-list { display: flex; flex-direction: column; gap: 28px; padding-top: 28px; border-top: 1px solid rgba(184,149,91,0.22); }
+
+    .diff-item { display: flex; gap: 18px; align-items: flex-start; }
+
+    .diff-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.4rem;
+      color: var(--gold);
+      opacity: 0.25;
+      line-height: 0.85;
+      font-weight: 400;
+      flex-shrink: 0;
+      width: 38px;
+    }
+
+    .diff-item h3 {
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-size: 0.68rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.88);
+      margin-bottom: 6px;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .diff-item p { color: #b0a89e; line-height: 1.7; font-size: 0.88rem; }
+
+    /* Zone 3: Light — Contact (merged statement + CTA) */
+    .preview-contact {
+      background: radial-gradient(ellipse 80% 60% at 50% 100%, rgba(184,149,91,0.06) 0%, transparent 70%), var(--cream);
+      padding: 100px 8% 110px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .contact-statement {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.9rem;
+      font-weight: 400;
+      color: var(--muted);
+      max-width: 580px;
+      line-height: 1.3;
+      margin-bottom: 56px;
+      padding-bottom: 56px;
+      border-bottom: 1px solid rgba(184,149,91,0.2);
+    }
+
+    .contact-cta h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.2rem;
+      font-weight: 400;
+      line-height: 1.1;
+      color: var(--text);
+      margin-bottom: 16px;
+    }
+
+    .contact-cta p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.8;
+      max-width: 340px;
+      margin: 0 auto 32px;
+    }
+
+    .preview-btn-dark {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      padding: 18px 32px;
+      background: var(--black);
+      color: white;
+      font-size: 0.73rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-weight: 600;
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* Zone 4: Footer */
+    .preview-footer {
+      background: var(--black);
+      padding: 50px 8%;
+      display: grid;
+      grid-template-columns: 1fr 1.6fr 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    .footer-logo span {
+      display: block;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      letter-spacing: 0.32em;
+      color: white;
+      line-height: 1;
+    }
+
+    .footer-logo small {
+      display: block;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      color: rgba(255,255,255,0.6);
+      margin-top: 6px;
+    }
+
+    .footer-logo p {
+      margin-top: 14px;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      color: var(--gold);
+      font-size: 1rem;
+      opacity: 0.85;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: rgba(255,255,255,0.45);
+      padding-top: 4px;
+    }
+
+    .footer-contact {
+      color: rgba(255,255,255,0.35);
+      font-size: 0.85rem;
+      line-height: 1.9;
+    }
+
+    /* ─── Scroll indicator ────────────────────── */
+    .scroll-note {
+      text-align: center;
+      padding: 28px;
+      background: rgba(184,149,91,0.06);
+      border-top: 1px solid rgba(184,149,91,0.15);
+      border-bottom: 1px solid rgba(184,149,91,0.15);
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: rgba(184,149,91,0.6);
+    }
+
+    /* ─── Key callout ─────────────────────────── */
+    .key-callout {
+      padding: 60px 8%;
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 20px;
+      background: #0c0b09;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .callout-card {
+      border: 1px solid rgba(184,149,91,0.15);
+      padding: 28px 24px;
+      background: rgba(255,255,255,0.015);
+    }
+
+    .callout-card .num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      color: var(--gold);
+      opacity: 0.3;
+      line-height: 1;
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    .callout-card h3 {
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: white;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    .callout-card p {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.32);
+      line-height: 1.75;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ─── Page Header ──────────────────────────── -->
+  <div class="page-header">
+    <span class="eyebrow">Design Preview — Velvet Concierge Care</span>
+    <h1>The New Page Flow</h1>
+    <p>This is what the homepage would feel like with no stacked boxes — just three zones: hero, cinematic dark, and a clean CTA. Scroll through the full rendering below.</p>
+  </div>
+
+  <!-- ─── Flow Diagram ─────────────────────────── -->
+  <div class="section-label">
+    <h2>Before vs After — At a glance</h2>
+    <p>7 alternating boxes becomes 3 intentional zones. The two dark photo sections flow into each other with no break.</p>
+  </div>
+
+  <div class="zone-compare">
+
+    <div class="zone-col old">
+      <h3>Current — 7 separate blocks</h3>
+      <div class="zone-block dark-zone"><span class="tag">dark</span> Hero</div>
+      <div class="zone-block light-zone"><span class="tag">light</span> Intro</div>
+      <div class="zone-block dark-zone"><span class="tag">dark</span> Testimonial</div>
+      <div class="zone-block dark-zone"><span class="tag">dark</span> Difference</div>
+      <div class="zone-block light-zone"><span class="tag">light</span> Pause statement</div>
+      <div class="zone-block light-zone"><span class="tag">light</span> Contact CTA</div>
+      <div class="zone-block dark-zone"><span class="tag">dark</span> Footer</div>
+      <div class="zone-count">7 blocks · background switches 5 times on scroll</div>
+    </div>
+
+    <div class="zone-col new">
+      <h3>Proposed — 3 zones</h3>
+      <div class="zone-block dark-zone"><span class="tag">dark</span> Hero</div>
+      <div class="zone-block light-zone"><span class="tag">light</span> Intro</div>
+      <div class="zone-block cinematic"><span class="tag">cinematic</span> Testimonial → flows directly into →</div>
+      <div class="zone-block cinematic"><span class="tag">cinematic</span> Difference &nbsp;(one continuous dark scroll)</div>
+      <div class="zone-block merged-light"><span class="tag">light</span> Statement + Contact (one section)</div>
+      <div class="zone-block dark-zone"><span class="tag">dark</span> Footer</div>
+      <div class="zone-count">5 blocks · 2 removed · dark photos run together seamlessly</div>
+    </div>
+
+  </div>
+
+  <hr class="divider">
+
+  <!-- ─── The actual rendered preview ─────────── -->
+
+  <div class="preview-label">
+    <span class="eyebrow">Full Page Rendering</span>
+    <h2>Scroll through the full proposed homepage below</h2>
+    <p style="color:rgba(255,255,255,0.35); font-size:0.8rem; margin-top:8px;">This is the actual CSS and layout — not a mockup</p>
+  </div>
+
+  <!-- ZONE 1: Hero -->
+  <section class="preview-hero">
+    <div>
+      <p class="eyebrow">Private Duty Nursing · Palm Beach County</p>
+      <h1>The comfort of home. The confidence of <em>nursing expertise.</em></h1>
+      <p>Private in-home support and RN-led care for older adults, recovering patients, and the families who love them.</p>
+      <div class="preview-btn-gold">Schedule a Conversation <span>→</span></div>
+    </div>
+  </section>
+
+  <!-- ZONE 2: Light — Intro -->
+  <section class="preview-intro">
+    <div class="intro-left">
+      <h2>Home is where life happens. <em>We're here to help you live it well.</em></h2>
+    </div>
+    <div class="intro-right">
+      <p>Whether you're aging at home, recovering from surgery or illness, or simply need an extra hand, we provide personalized support so you and your family can focus on what matters most.</p>
+    </div>
+  </section>
+
+  <!-- ZONE 3: Cinematic Dark — these two run together with NO gap -->
+  <div class="cinematic-zone">
+
+    <div class="cinematic-label">↓ cinematic dark zone begins — two photos, one continuous scroll ↓</div>
+
+    <!-- Photo 1 of 2: Testimonial -->
+    <section class="preview-testimonial">
+      <div class="testi-block">
+        <span class="quote-mark">&ldquo;</span>
+        <p>We believe peace of mind begins with knowing someone thoughtful, capable, and attentive is there when your family needs support.</p>
+        <span class="testi-attrib">— The Velvet Concierge Care Team</span>
+      </div>
+    </section>
+
+    <!-- Photo 2 of 2: Difference — NO margin, NO gap, flows directly from above -->
+    <section class="preview-difference">
+      <div class="diff-content">
+        <span class="site-eyebrow">The Velvet Difference</span>
+        <h2>Clinical expertise.<br>Thoughtful care.<br><em>Unwavering attention.</em></h2>
+        <div class="diff-list">
+          <div class="diff-item">
+            <span class="diff-num">01</span>
+            <div><h3>RN-Led Oversight</h3><p>Registered Nurse expertise guiding every care plan and decision.</p></div>
+          </div>
+          <div class="diff-item">
+            <span class="diff-num">02</span>
+            <div><h3>Personalized Support</h3><p>Care tailored to your unique needs, preferences, and lifestyle.</p></div>
+          </div>
+          <div class="diff-item">
+            <span class="diff-num">03</span>
+            <div><h3>Clear Communication</h3><p>We keep you informed and involved every step of the way.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="cinematic-label">↑ cinematic dark zone ends ↑</div>
+
+  </div>
+
+  <!-- ZONE 4: Light — Statement + Contact merged -->
+  <section class="preview-contact">
+    <p class="contact-statement">
+      We don't fit families into care plans.<br>
+      <em>We build care plans around families.</em>
+    </p>
+    <div class="contact-cta">
+      <h2>Let's talk about<br><em>how we can help.</em></h2>
+      <p>Every family's situation is different. We'd love to learn about yours.</p>
+      <div class="preview-btn-dark">Schedule a Conversation <span>→</span></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="preview-footer">
+    <div class="footer-logo">
+      <span>VELVET</span>
+      <small>CONCIERGE CARE</small>
+      <p>Exceptional care, right at home.</p>
+    </div>
+    <div class="footer-links">
+      <span>Services</span>
+      <span>Who We Help</span>
+      <span>About</span>
+      <span>FAQ</span>
+      <span>Contact</span>
+    </div>
+    <div class="footer-contact">
+      <p>(843) 532-7181</p>
+      <p>Proudly serving Palm Beach County</p>
+    </div>
+  </footer>
+
+  <!-- ─── What changed ──────────────────────────── -->
+  <div class="key-callout">
+    <div class="callout-card">
+      <span class="num">01</span>
+      <h3>Two photos, one zone</h3>
+      <p>The testimonial and difference sections run directly into each other. Same dark aesthetic, different photo. You scroll through both without hitting a box edge.</p>
+    </div>
+    <div class="callout-card">
+      <span class="num">02</span>
+      <h3>One light contact section</h3>
+      <p>The statement ("We don't fit families...") and the contact CTA are one section. No separate pause box. The statement is the emotional opener, the CTA is the close.</p>
+    </div>
+    <div class="callout-card">
+      <span class="num">03</span>
+      <h3>5 zones not 7 boxes</h3>
+      <p>Hero → Intro → Cinematic dark → Contact → Footer. The background only changes 4 times the whole way down. That's what makes it feel like a scroll, not a slideshow.</p>
+    </div>
+  </div>
+
+</body>
+</html>
