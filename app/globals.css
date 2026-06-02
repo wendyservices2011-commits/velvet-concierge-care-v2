@@ -241,7 +241,7 @@ em { color: var(--gold); font-style: italic; }
 /* ─── Intro — enormous type ──────────────────────────────── */
 
 .intro {
-  padding: 110px 7% 120px;
+  padding: 110px 8% 120px;
   background: var(--ivory);
 }
 
@@ -540,133 +540,7 @@ em { color: var(--gold); font-style: italic; }
   /* Photo stands on its own — no gradient, no text overlay */
 }
 
-/* ─── Split Quote — text left, interior photo right ─────── */
-
-.splitQuote {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  min-height: 520px;
-}
-
-.splitQuoteText {
-  background: var(--cream);
-  padding: 90px 7%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.splitQuoteMark {
-  font-family: var(--font-serif);
-  font-size: 6rem;
-  color: var(--gold);
-  opacity: 0.3;
-  line-height: 0.5;
-  display: block;
-  margin-bottom: 24px;
-  font-style: italic;
-}
-
-.splitQuoteText p {
-  font-family: var(--font-serif);
-  font-size: clamp(1.4rem, 2.2vw, 2rem);
-  font-weight: 400;
-  color: var(--text);
-  line-height: 1.45;
-  margin-bottom: 24px;
-}
-
-.splitQuoteText cite {
-  font-style: normal;
-  font-size: 0.68rem;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  color: var(--gold);
-  font-weight: 600;
-  font-family: var(--font-sans);
-}
-
-.splitQuotePhoto {
-  background: url("/home-interior.png") center / cover;
-}
-
-/* ─── Difference — text right, hands photo left ─────────── */
-
-.difference {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  min-height: 560px;
-}
-
-.differencePhoto {
-  background: url("/hands.png") center / cover;
-}
-
-.differenceContent {
-  background: var(--ivory);
-  padding: 80px 7%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.differenceLeft { display: none; }
-
-.eyebrowLabel {
-  font-size: 0.62rem;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  color: var(--gold);
-  font-weight: 600;
-  display: block;
-  margin-bottom: 16px;
-  font-family: var(--font-sans);
-}
-
-.differenceContent h2 {
-  font-family: var(--font-serif);
-  font-size: clamp(1.8rem, 2.8vw, 3.2rem);
-  font-weight: 400;
-  color: var(--text);
-  line-height: 1.1;
-  margin-bottom: 36px;
-}
-
-.differenceList {
-  display: flex;
-  flex-direction: column;
-}
-
-.differenceRight { display: flex; flex-direction: column; }
-
-.differenceItem {
-  padding: 20px 0;
-  border-bottom: 1px solid rgba(26,22,16,0.1);
-  display: grid;
-  grid-template-columns: 40px 1fr;
-  gap: 16px;
-  align-items: start;
-}
-
-.differenceItem:first-child { border-top: 1px solid rgba(26,22,16,0.1); }
-
-.itemNum {
-  font-family: var(--font-serif);
-  font-size: 1rem;
-  color: var(--gold);
-  opacity: 0.45;
-  font-weight: 400;
-  padding-top: 3px;
-  user-select: none;
-}
-
-.differenceItem h3 {
-  font-family: var(--font-serif);
-  font-size: 1.1rem;
-  font-weight: 400;
-  color: var(--text);
-  margin-bottom: 5px;
-}
+/* old split layout removed — full-bleed is defined above */
 
 .differenceItem p {
   font-size: 0.85rem;
