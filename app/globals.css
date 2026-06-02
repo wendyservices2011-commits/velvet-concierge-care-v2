@@ -247,7 +247,7 @@ em { color: var(--gold); font-style: italic; }
 
 .intro h2 {
   font-family: var(--font-serif);
-  font-size: clamp(3.2rem, 4.8vw, 6rem);
+  font-size: clamp(3.8rem, 7.5vw, 9.5rem);
   font-weight: 400;
   line-height: 1.05;
   color: var(--text);
