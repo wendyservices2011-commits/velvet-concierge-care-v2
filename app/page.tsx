@@ -130,9 +130,9 @@ export default function Home() {
         </p>
         <div className="contactCta">
           <h2>Let's talk about<br /><em>how we can help.</em></h2>
-          <p>Every family's situation is different. We'd love to learn about yours.</p>
+          <p>Every family's situation is different.<br />We'd love to learn about yours.</p>
           <Link href="/consultation" className="darkButton">
-            Request a Consultation <span>→</span>
+            Schedule a Consultation <span>→</span>
           </Link>
           <p className="contactAlt">
             Prefer to call? <a href="tel:8435327181">(843) 532-7181</a>
