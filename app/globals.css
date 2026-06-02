@@ -165,9 +165,9 @@ em { color: var(--gold); font-style: italic; }
   min-height: 100vh;
   background:
     linear-gradient(to right,
-      rgba(250,245,236,0.97) 0%,
-      rgba(250,245,236,0.88) 28%,
-      rgba(250,245,236,0.45) 55%,
+      rgba(250,245,236,0.92) 0%,
+      rgba(250,245,236,0.75) 28%,
+      rgba(250,245,236,0.25) 55%,
       rgba(250,245,236,0.0) 100%),
     url("/hero2.jpg") center right / cover;
   display: flex;
@@ -247,7 +247,7 @@ em { color: var(--gold); font-style: italic; }
 
 .intro h2 {
   font-family: var(--font-serif);
-  font-size: clamp(3.2rem, 5.8vw, 7.5rem);
+  font-size: clamp(3.2rem, 4.8vw, 6rem);
   font-weight: 400;
   line-height: 1.05;
   color: var(--text);

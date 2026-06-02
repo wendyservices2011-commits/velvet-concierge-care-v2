@@ -64,8 +64,9 @@ export default function Home() {
       {/* Intro — enormous type */}
       <section className="intro">
         <h2>
-          Home is where life happens.<br />
-          <em>We're here to help you live it well.</em>
+          Home is where<br />
+          life happens.<br />
+          <em>We're here to help<br />you live it well.</em>
         </h2>
         <p>
           Whether you're aging at home, recovering from surgery or illness,
