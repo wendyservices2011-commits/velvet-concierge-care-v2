@@ -226,7 +226,7 @@ em { color: var(--gold); font-style: italic; }
   transition: background 0.22s ease, color 0.22s ease, box-shadow 0.22s ease;
 }
 
-.goldButton { background: var(--gold); color: white; }
+.goldButton { background: var(--gold); color: white; align-self: flex-start; }
 .goldButton:hover {
   background: #7a5d22;
   box-shadow: 0 4px 20px rgba(140,106,40,0.3);
