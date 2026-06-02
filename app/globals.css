@@ -238,20 +238,219 @@ em { color: var(--gold); font-style: italic; }
   box-shadow: 0 4px 20px rgba(26,22,16,0.2);
 }
 
-/* ─── Intro — three editorial lines ─────────────────────── */
-/* Not cards. Not boxes. Three truths, lots of air. */
+/* ─── Intro — enormous type ──────────────────────────────── */
 
 .intro {
-  padding: 130px 7% 140px;
+  padding: 110px 7% 120px;
   background: var(--ivory);
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 60px;
-  align-items: start;
 }
 
-.introItem {}
+.intro h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(3.8rem, 7.5vw, 9.5rem);
+  font-weight: 400;
+  line-height: 1.0;
+  color: var(--text);
+  margin-bottom: 40px;
+  letter-spacing: -0.01em;
+}
 
+.intro p {
+  max-width: 500px;
+  line-height: 1.95;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+/* ─── Story / Quote Image ────────────────────────────────── */
+
+.storyImage {
+  min-height: 540px;
+  background:
+    linear-gradient(to right, rgba(26,22,16,0.04), rgba(26,22,16,0.74)),
+    url("/home-interior.png") center / cover;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 80px 7%;
+}
+
+.testimonial { color: white; max-width: 420px; }
+
+.quoteMarkDecor {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 8rem;
+  color: var(--gold);
+  line-height: 0.52;
+  margin-bottom: 18px;
+  opacity: 0.7;
+  font-style: italic;
+  user-select: none;
+}
+
+.testimonial p {
+  font-family: var(--font-serif);
+  font-size: clamp(1.85rem, 2.8vw, 3rem);
+  line-height: 1.15;
+}
+
+.testimonialAttrib {
+  display: block;
+  margin-top: 26px;
+  color: var(--gold);
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.05rem;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+/* ─── Difference — full-bleed hands photo ────────────────── */
+
+.difference {
+  min-height: 580px;
+  background:
+    linear-gradient(to right,
+      rgba(26,22,16,0.05) 0%,
+      rgba(26,22,16,0.65) 42%,
+      rgba(26,22,16,0.9) 100%),
+    url("/hands.png") center / cover;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 90px 7%;
+  color: white;
+}
+
+.differenceContent { max-width: 480px; }
+
+.eyebrow {
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.7rem;
+  font-weight: 600;
+  margin-bottom: 18px;
+  display: block;
+  font-family: var(--font-sans);
+}
+
+.difference h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 3.2vw, 4.2rem);
+  line-height: 1.1;
+  font-weight: 400;
+  margin-bottom: 38px;
+}
+
+.differenceList {
+  border-top: 1px solid rgba(250,245,236,0.2);
+  padding-top: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.differenceItem { display: flex; gap: 18px; align-items: flex-start; }
+
+.itemNum {
+  font-family: var(--font-serif);
+  font-size: 2.4rem;
+  color: var(--gold);
+  opacity: 0.28;
+  line-height: 0.85;
+  font-weight: 400;
+  flex-shrink: 0;
+  width: 38px;
+  user-select: none;
+}
+
+.differenceList h3 {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 7px;
+  font-family: var(--font-sans);
+}
+
+.differenceList p { color: rgba(250,245,236,0.6); line-height: 1.75; font-size: 0.88rem; }
+
+/* ─── Contact — merged statement + CTA ──────────────────── */
+
+.contactMerged {
+  padding: 120px 7% 130px;
+  background: var(--cream);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.contactStatement {
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 2.2vw, 2.1rem);
+  font-weight: 400;
+  color: var(--muted);
+  max-width: 600px;
+  line-height: 1.35;
+  margin-bottom: 68px;
+  padding-bottom: 68px;
+  border-bottom: 1px solid rgba(140,106,40,0.2);
+}
+
+.contactCta h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(2.6rem, 4vw, 4.8rem);
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.contactCta > p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  max-width: 340px;
+  margin: 0 auto 28px;
+}
+
+.contactAlt {
+  margin-top: 16px;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.contactAlt a { color: var(--gold); text-decoration: underline; text-underline-offset: 3px; }
+
+/* ─── Inner page contact CTA ─────────────────────────────── */
+
+.contact {
+  padding: 110px 7%;
+  background: var(--cream);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+.contact h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(2.4rem, 4vw, 4.6rem);
+  font-weight: 400;
+  line-height: 1.1;
+  max-width: 520px;
+}
+
+.contact p { color: var(--muted); line-height: 1.8; max-width: 340px; }
+.contact .darkButton { margin-top: 8px; }
+
+/* PLACEHOLDER — keep old introItem in case referenced */
+.introItem {}
 .introItem .num {
   font-family: var(--font-serif);
   font-size: 5rem;
@@ -341,52 +540,111 @@ em { color: var(--gold); font-style: italic; }
   /* Photo stands on its own — no gradient, no text overlay */
 }
 
-/* ─── Difference — editorial, not boxed ─────────────────── */
+/* ─── Split Quote — text left, interior photo right ─────── */
+
+.splitQuote {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 520px;
+}
+
+.splitQuoteText {
+  background: var(--cream);
+  padding: 90px 7%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.splitQuoteMark {
+  font-family: var(--font-serif);
+  font-size: 6rem;
+  color: var(--gold);
+  opacity: 0.3;
+  line-height: 0.5;
+  display: block;
+  margin-bottom: 24px;
+  font-style: italic;
+}
+
+.splitQuoteText p {
+  font-family: var(--font-serif);
+  font-size: clamp(1.4rem, 2.2vw, 2rem);
+  font-weight: 400;
+  color: var(--text);
+  line-height: 1.45;
+  margin-bottom: 24px;
+}
+
+.splitQuoteText cite {
+  font-style: normal;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--gold);
+  font-weight: 600;
+  font-family: var(--font-sans);
+}
+
+.splitQuotePhoto {
+  background: url("/home-interior.png") center / cover;
+}
+
+/* ─── Difference — text right, hands photo left ─────────── */
 
 .difference {
-  padding: 130px 7%;
-  background: var(--ivory);
   display: grid;
-  grid-template-columns: 1fr 1.6fr;
-  gap: 100px;
-  align-items: start;
+  grid-template-columns: 1fr 1fr;
+  min-height: 560px;
 }
 
-.differenceLeft {
-  position: sticky;
-  top: 100px;
+.differencePhoto {
+  background: url("/hands.png") center / cover;
 }
 
-.differenceLeft .eyebrowLabel {
+.differenceContent {
+  background: var(--ivory);
+  padding: 80px 7%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.differenceLeft { display: none; }
+
+.eyebrowLabel {
   font-size: 0.62rem;
   text-transform: uppercase;
   letter-spacing: 0.2em;
   color: var(--gold);
   font-weight: 600;
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
+  font-family: var(--font-sans);
 }
 
-.differenceLeft h2 {
+.differenceContent h2 {
   font-family: var(--font-serif);
-  font-size: clamp(2.2rem, 3.5vw, 4.5rem);
+  font-size: clamp(1.8rem, 2.8vw, 3.2rem);
   font-weight: 400;
   color: var(--text);
   line-height: 1.1;
+  margin-bottom: 36px;
 }
 
-.differenceRight {
+.differenceList {
   display: flex;
   flex-direction: column;
-  gap: 0;
 }
 
+.differenceRight { display: flex; flex-direction: column; }
+
 .differenceItem {
-  padding: 36px 0;
+  padding: 20px 0;
   border-bottom: 1px solid rgba(26,22,16,0.1);
   display: grid;
-  grid-template-columns: 60px 1fr;
-  gap: 24px;
+  grid-template-columns: 40px 1fr;
+  gap: 16px;
   align-items: start;
 }
 
@@ -394,9 +652,9 @@ em { color: var(--gold); font-style: italic; }
 
 .itemNum {
   font-family: var(--font-serif);
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: var(--gold);
-  opacity: 0.6;
+  opacity: 0.45;
   font-weight: 400;
   padding-top: 3px;
   user-select: none;
@@ -404,16 +662,16 @@ em { color: var(--gold); font-style: italic; }
 
 .differenceItem h3 {
   font-family: var(--font-serif);
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 400;
   color: var(--text);
-  margin-bottom: 8px;
+  margin-bottom: 5px;
 }
 
 .differenceItem p {
-  font-size: 0.88rem;
+  font-size: 0.85rem;
   color: var(--muted);
-  line-height: 1.8;
+  line-height: 1.75;
 }
 
 /* ─── Contact — clean, centered, no merged box ───────────── */
@@ -792,6 +1050,52 @@ details[open] summary::after { transform: rotate(45deg); }
 
 .faqAnswer { padding: 0 0 24px; color: var(--muted); line-height: 1.85; font-size: 0.9rem; max-width: 640px; }
 
+/* ─── Consultation Form ──────────────────────────────────── */
+
+.consultHero { background: var(--black); padding: 90px 7% 100px; color: white; }
+.consultHero h1 { font-family: var(--font-serif); font-size: clamp(3rem, 5vw, 5.5rem); font-weight: 400; line-height: 1.06; max-width: 600px; margin: 20px 0 20px; }
+.consultHero > p { max-width: 460px; font-size: 1rem; line-height: 1.85; color: rgba(255,255,255,0.5); }
+.consultSection { background: var(--ivory); padding: 70px 7% 110px; display: flex; flex-direction: column; align-items: center; }
+.consultProgress { display: flex; align-items: center; margin-bottom: 52px; }
+.consultProgressItem { display: flex; align-items: center; }
+.consultProgressDot { width: 10px; height: 10px; border-radius: 50%; border: 1.5px solid rgba(140,106,40,0.4); background: transparent; transition: background 0.3s, border-color 0.3s; flex-shrink: 0; }
+.consultProgressDot.done { background: var(--gold); border-color: var(--gold); }
+.consultProgressLine { width: 60px; height: 1px; background: rgba(140,106,40,0.2); margin: 0 4px; transition: background 0.3s; }
+.consultProgressLine.done { background: var(--gold); }
+.consultCard { width: 100%; max-width: 640px; }
+.consultStep {}
+.consultStepHead { margin-bottom: 44px; }
+.consultStepNum { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--gold); margin-bottom: 12px; font-weight: 600; }
+.consultStepHead h2 { font-family: var(--font-serif); font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 400; color: var(--text); line-height: 1.1; margin-bottom: 10px; }
+.consultStepHead > p { color: var(--muted); font-size: 0.92rem; line-height: 1.75; }
+.consultFields { display: flex; flex-direction: column; gap: 36px; margin-bottom: 48px; }
+.consultField { display: flex; flex-direction: column; gap: 10px; }
+.consultField label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.14em; font-weight: 600; color: var(--text); display: flex; align-items: center; gap: 12px; }
+.consultFieldNote { font-size: 0.65rem; letter-spacing: 0.1em; color: var(--muted); text-transform: uppercase; font-weight: 400; }
+.consultInput { width: 100%; background: transparent; border: none; border-bottom: 1px solid rgba(26,22,16,0.18); padding: 12px 0; font-size: 1rem; color: var(--text); outline: none; font-family: var(--font-sans); transition: border-color 0.2s; border-radius: 0; -webkit-appearance: none; }
+.consultInput:focus { border-bottom-color: var(--gold); }
+.consultInput::placeholder { color: rgba(106,97,88,0.45); font-size: 0.9rem; }
+.consultTextarea { resize: none; min-height: 90px; line-height: 1.75; }
+.consultChips { display: flex; flex-wrap: wrap; gap: 8px; }
+.consultChip { padding: 9px 16px; border: 1px solid rgba(26,22,16,0.18); background: transparent; font-size: 0.75rem; color: var(--muted); cursor: pointer; font-family: var(--font-sans); letter-spacing: 0.04em; transition: border-color 0.18s, color 0.18s, background 0.18s; text-align: left; }
+.consultChip:hover { border-color: var(--gold); color: var(--text); }
+.consultChip.selected { border-color: var(--gold); background: rgba(140,106,40,0.08); color: var(--gold); font-weight: 600; }
+.consultNav { display: flex; justify-content: space-between; align-items: center; }
+.consultBack { background: none; border: none; cursor: pointer; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); font-family: var(--font-sans); font-weight: 500; padding: 0; transition: color 0.2s; }
+.consultBack:hover { color: var(--text); }
+.consultPrivacy { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 36px; padding: 20px 24px; background: rgba(140,106,40,0.06); border-left: 2px solid rgba(140,106,40,0.4); }
+.consultPrivacy span { color: var(--gold); font-size: 0.9rem; flex-shrink: 0; margin-top: 2px; }
+.consultPrivacy p { font-size: 0.82rem; color: var(--muted); line-height: 1.75; margin: 0; }
+.consultError { margin-top: 20px; font-size: 0.85rem; color: #c07878; text-align: center; }
+.consultError a { color: #c07878; text-decoration: underline; }
+.consultSuccess { min-height: 80vh; background: var(--ivory); display: flex; align-items: center; justify-content: center; padding: 80px 7%; }
+.consultSuccessInner { max-width: 540px; text-align: center; }
+.consultSuccessMark { display: block; color: var(--gold); font-size: 1.5rem; margin-bottom: 28px; opacity: 0.7; }
+.consultSuccessInner h1 { font-family: var(--font-serif); font-size: clamp(2.4rem, 4vw, 3.8rem); font-weight: 400; color: var(--text); margin-bottom: 20px; line-height: 1.1; }
+.consultSuccessInner p { color: var(--muted); line-height: 1.85; font-size: 1rem; margin-bottom: 14px; }
+.consultSuccessSub { font-size: 0.88rem !important; margin-top: 8px; }
+.consultSuccessSub a { color: var(--gold); text-decoration: underline; text-underline-offset: 3px; }
+
 /* ─── Responsive ─────────────────────────────────────────── */
 
 @media (max-width: 1000px) {
@@ -800,15 +1104,30 @@ details[open] summary::after { transform: rotate(45deg); }
   .siteNavLinks, .siteNav .navCta { display: none; }
   .siteNav .hamburger { display: flex; }
 
-  .hero { padding: 140px 8% 80px; background-position: center; }
+  .hero { padding: 140px 7% 80px; background-position: center; }
   .heroLeft { max-width: 100%; }
 
-  .intro { grid-template-columns: 1fr; gap: 48px; padding: 80px 8%; }
+  .intro { padding: 80px 7% 90px; }
+  .intro h2 { font-size: clamp(3rem, 11vw, 5.5rem); }
 
-  .difference { grid-template-columns: 1fr; gap: 48px; padding: 80px 8%; }
-  .differenceLeft { position: static; }
+  .storyImage { min-height: 460px; padding: 60px 7%; }
 
-  .contactSection { padding: 90px 8%; }
+  .difference {
+    min-height: 500px;
+    padding: 60px 7%;
+    justify-content: flex-start;
+    background:
+      linear-gradient(to bottom, rgba(26,22,16,0.45) 0%, rgba(26,22,16,0.88) 50%),
+      url("/hands.png") center / cover;
+  }
+  .differenceContent { max-width: 100%; }
+
+  .contactMerged { padding: 90px 7% 100px; }
+  .contactStatement { font-size: clamp(1.3rem, 4vw, 1.7rem); margin-bottom: 50px; padding-bottom: 50px; }
+
+  .consultSection { padding: 60px 7% 90px; }
+  .consultProgressLine { width: 40px; }
+  .consultCard { max-width: 100%; }
 
   .portraitGrid { grid-template-columns: 1fr; }
   .portrait { padding: 52px 8%; }
