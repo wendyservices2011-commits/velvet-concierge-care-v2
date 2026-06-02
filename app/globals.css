@@ -217,10 +217,10 @@ em { color: var(--gold); font-style: italic; }
   display: inline-flex;
   gap: 10px;
   align-items: center;
-  padding: 14px 22px;
-  font-size: 0.7rem;
+  padding: 13px 20px;
+  font-size: 0.65rem;
   text-transform: uppercase;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.1em;
   font-weight: 600;
   font-family: var(--font-sans);
   transition: background 0.22s ease, color 0.22s ease, box-shadow 0.22s ease;
