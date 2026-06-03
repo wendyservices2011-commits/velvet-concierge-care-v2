@@ -4,7 +4,7 @@ import SiteContactCta from "@/app/components/SiteContactCta";
 
 export const metadata = {
   title: "Services — Velvet Concierge Care",
-  description: "Private RN-led nursing care and lifestyle concierge services for older adults and families across Palm Beach County, Florida.",
+  description: "Private RN-led nursing care and lifestyle concierge services for seniors, adults recovering from surgery, and families across Palm Beach County, Florida.",
 };
 
 export default function ServicesPage() {
