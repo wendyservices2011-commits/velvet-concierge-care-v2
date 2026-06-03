@@ -4,7 +4,7 @@ import SiteContactCta from "@/app/components/SiteContactCta";
 
 export const metadata = {
   title: "FAQ — Velvet Concierge Care",
-  description: "Common questions about private nursing care and how Velvet Concierge Care works in Palm Beach County.",
+  description: "We serve seniors, post-surgical patients, adults managing chronic illness, and families navigating care across Palm Beach County.",
 };
 
 export default function FaqPage() {

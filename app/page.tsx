@@ -51,8 +51,8 @@ export default function Home() {
             <em>nursing expertise.</em>
           </h1>
           <p>
-            Private in-home support and RN-led care for older adults,
-            recovering patients, and the families who love them.
+            Private in-home support and RN-led care for seniors, adults
+            recovering from surgery, and the families who love them.
           </p>
           <Link href="/consultation" className="goldButton">
             Schedule a Consultation <span>→</span>
@@ -69,9 +69,9 @@ export default function Home() {
           <em>We're here to help<br />you live it well.</em>
         </h2>
         <p>
-          Whether you're aging at home, recovering from surgery or illness,
-          or simply need an extra hand — we provide personalized support so
-          your family can focus on what matters most.
+          Whether you're aging at home, recovering from surgery, managing
+          a new diagnosis, or simply need consistent expert support —
+          we're here so your family can focus on what matters most.
         </p>
       </section>
 

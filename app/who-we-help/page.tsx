@@ -15,7 +15,7 @@ export default function WhoWeHelpPage() {
         <section className="pageHero">
           <p className="eyebrow">Who We Help</p>
           <h1>Every family's situation<br />is <em>different.</em></h1>
-          <p>We serve older adults who want to stay home, families navigating recovery, and the people who love them — wherever they are.</p>
+          <p>We serve seniors who want to remain in their homes, adults recovering from surgery or illness, families navigating a new diagnosis, and the people who love them — wherever they are.</p>
         </section>
 
         <section className="portraitSection">
