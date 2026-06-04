@@ -265,18 +265,14 @@ em { color: var(--gold); font-style: italic; }
 /* ─── Story / Quote Image ────────────────────────────────── */
 
 .storyImage {
-  min-height: 540px;
-  background:
-    linear-gradient(to right, rgba(26,22,16,0.04), rgba(26,22,16,0.74)),
-    url("/home-interior.png") center / cover;
+  background: var(--ivory);
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
-  padding: 80px 7%;
-  margin: 0 4%;
+  padding: 100px 7%;
 }
 
-.testimonial { color: white; max-width: 420px; }
+.testimonial { color: var(--text); max-width: 620px; text-align: center; }
 
 .quoteMarkDecor {
   display: block;
@@ -322,7 +318,6 @@ em { color: var(--gold); font-style: italic; }
   justify-content: flex-end;
   padding: 90px 7%;
   color: white;
-  margin: 40px 4% 0;
 }
 
 .differenceContent { max-width: 480px; }
