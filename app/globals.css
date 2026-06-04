@@ -172,7 +172,7 @@ em { color: var(--gold); font-style: italic; }
     url("/hero2.jpg") center right / cover;
   display: flex;
   align-items: center;
-  padding: 160px 7% 100px;
+  padding: 220px 7% 100px;
   position: relative;
 }
 
