@@ -274,8 +274,6 @@ em { color: var(--gold); font-style: italic; }
   align-items: center;
   padding: 80px 7%;
   margin: 0 4%;
-  border-radius: 12px;
-  overflow: hidden;
 }
 
 .testimonial { color: white; max-width: 420px; }
@@ -325,8 +323,6 @@ em { color: var(--gold); font-style: italic; }
   padding: 90px 7%;
   color: white;
   margin: 40px 4% 0;
-  border-radius: 12px;
-  overflow: hidden;
 }
 
 .differenceContent { max-width: 480px; }
