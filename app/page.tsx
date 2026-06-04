@@ -155,6 +155,7 @@ export default function Home() {
         </div>
         <div className="footerContact">
           <p>(843) 532-7181</p>
+          <p><a href="mailto:info@velvetconciergecare.com">info@velvetconciergecare.com</a></p>
           <p>Serving Palm Beach County, FL</p>
         </div>
       </footer>
