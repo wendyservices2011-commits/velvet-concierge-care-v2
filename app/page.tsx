@@ -47,7 +47,7 @@ export default function Home() {
           <p className="heroEyebrow">Private Duty Nursing · Palm Beach County</p>
           <h1>
             The comfort of home.<br />
-            The confidence of{" "}
+            The confidence of<br />
             <em>nursing expertise.</em>
           </h1>
           <p>
