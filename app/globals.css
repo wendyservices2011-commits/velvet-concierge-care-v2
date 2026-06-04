@@ -195,8 +195,8 @@ em { color: var(--gold); font-style: italic; }
 
 .heroLeft h1 {
   font-family: var(--font-serif);
-  font-size: clamp(3rem, 5vw, 7rem);
-  line-height: 1.04;
+  font-size: clamp(2.2rem, 3.8vw, 5rem);
+  line-height: 1.08;
   font-weight: 400;
   color: var(--text);
   margin-bottom: 28px;
