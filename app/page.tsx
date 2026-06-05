@@ -75,36 +75,50 @@ export default function Home() {
         </p>
       </section>
 
-      {/* Clean editorial middle section */}
-      <section id="services" className="editorialSection">
-        <div className="editorialTop">
+      {/* Cinematic: home interior + quote */}
+      <section className="storyImage">
+        <div className="testimonial">
+          <span className="quoteMarkDecor">&ldquo;</span>
+          <p>
+            We believe peace of mind begins with knowing someone thoughtful,
+            capable, and attentive is there when your family needs support.
+          </p>
+          <span className="testimonialAttrib">— The Velvet Concierge Care Team</span>
+        </div>
+      </section>
+
+      {/* Cinematic: hands photo */}
+      <section id="services" className="difference">
+        <div className="differenceContent">
           <p className="eyebrow">The Velvet Difference</p>
           <h2>
             Clinical expertise.<br />
             Thoughtful care.<br />
             <em>Unwavering attention.</em>
           </h2>
-        </div>
-        <div className="editorialItems">
-          <div className="editorialItem">
-            <span className="itemNum">01</span>
-            <h3>RN-Led Oversight</h3>
-            <p>Registered Nurse expertise guiding every care plan and decision.</p>
+          <div className="differenceList">
+            <div className="differenceItem">
+              <span className="itemNum">01</span>
+              <div>
+                <h3>RN-Led Oversight</h3>
+                <p>Registered Nurse expertise guiding every care plan and decision.</p>
+              </div>
+            </div>
+            <div className="differenceItem">
+              <span className="itemNum">02</span>
+              <div>
+                <h3>Personalized Support</h3>
+                <p>Care tailored to your unique needs, preferences, and lifestyle.</p>
+              </div>
+            </div>
+            <div className="differenceItem">
+              <span className="itemNum">03</span>
+              <div>
+                <h3>Clear Communication</h3>
+                <p>We keep you informed and involved every step of the way.</p>
+              </div>
+            </div>
           </div>
-          <div className="editorialItem">
-            <span className="itemNum">02</span>
-            <h3>Personalized Support</h3>
-            <p>Care tailored to your unique needs, preferences, and lifestyle.</p>
-          </div>
-          <div className="editorialItem">
-            <span className="itemNum">03</span>
-            <h3>Clear Communication</h3>
-            <p>We keep you informed and involved every step of the way.</p>
-          </div>
-        </div>
-        <div className="editorialQuote">
-          <p>&ldquo;We believe peace of mind begins with knowing someone thoughtful, capable, and attentive is there when your family needs support.&rdquo;</p>
-          <span>— The Velvet Concierge Care Team</span>
         </div>
       </section>
 
