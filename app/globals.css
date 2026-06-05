@@ -322,7 +322,7 @@ em { color: var(--gold); font-style: italic; }
 }
 
 .differenceRight {
-  background: var(--ivory);
+  background: var(--cream);
   display: flex;
   align-items: center;
   justify-content: center;
