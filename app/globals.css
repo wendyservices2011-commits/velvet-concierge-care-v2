@@ -348,7 +348,7 @@ em { color: var(--gold); font-style: italic; }
 }
 
 .differenceList {
-  border-top: 1px solid rgba(250,245,236,0.2);
+  border-top: 1px solid rgba(26,22,16,0.15);
   padding-top: 36px;
   display: flex;
   flex-direction: column;
@@ -374,7 +374,7 @@ em { color: var(--gold); font-style: italic; }
   letter-spacing: 0.14em;
   font-size: 0.7rem;
   font-weight: 600;
-  color: rgba(255,255,255,0.9);
+  color: var(--text);
   margin-bottom: 7px;
   font-family: var(--font-sans);
 }
