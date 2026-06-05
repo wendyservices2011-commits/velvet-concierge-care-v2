@@ -87,35 +87,38 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Cinematic: hands photo */}
+      {/* Split: hands photo left, content right */}
       <section id="services" className="difference">
-        <div className="differenceContent">
-          <p className="eyebrow">The Velvet Difference</p>
-          <h2>
-            Clinical expertise.<br />
-            Thoughtful care.<br />
-            <em>Unwavering attention.</em>
-          </h2>
-          <div className="differenceList">
-            <div className="differenceItem">
-              <span className="itemNum">01</span>
-              <div>
-                <h3>RN-Led Oversight</h3>
-                <p>Registered Nurse expertise guiding every care plan and decision.</p>
+        <div className="differencePhoto" />
+        <div className="differenceRight">
+          <div className="differenceContent">
+            <p className="eyebrow">The Velvet Difference</p>
+            <h2>
+              Clinical expertise.<br />
+              Thoughtful care.<br />
+              <em>Unwavering attention.</em>
+            </h2>
+            <div className="differenceList">
+              <div className="differenceItem">
+                <span className="itemNum">01</span>
+                <div>
+                  <h3>RN-Led Oversight</h3>
+                  <p>Registered Nurse expertise guiding every care plan and decision.</p>
+                </div>
               </div>
-            </div>
-            <div className="differenceItem">
-              <span className="itemNum">02</span>
-              <div>
-                <h3>Personalized Support</h3>
-                <p>Care tailored to your unique needs, preferences, and lifestyle.</p>
+              <div className="differenceItem">
+                <span className="itemNum">02</span>
+                <div>
+                  <h3>Personalized Support</h3>
+                  <p>Care tailored to your unique needs, preferences, and lifestyle.</p>
+                </div>
               </div>
-            </div>
-            <div className="differenceItem">
-              <span className="itemNum">03</span>
-              <div>
-                <h3>Clear Communication</h3>
-                <p>We keep you informed and involved every step of the way.</p>
+              <div className="differenceItem">
+                <span className="itemNum">03</span>
+                <div>
+                  <h3>Clear Communication</h3>
+                  <p>We keep you informed and involved every step of the way.</p>
+                </div>
               </div>
             </div>
           </div>

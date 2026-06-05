@@ -265,14 +265,17 @@ em { color: var(--gold); font-style: italic; }
 /* ─── Story / Quote Image ────────────────────────────────── */
 
 .storyImage {
-  background: var(--ivory);
+  min-height: 540px;
+  background:
+    linear-gradient(to right, rgba(26,22,16,0.04), rgba(26,22,16,0.74)),
+    url("/home-interior.png") center / cover;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  padding: 100px 7%;
+  padding: 80px 7%;
 }
 
-.testimonial { color: var(--text); max-width: 620px; text-align: center; }
+.testimonial { color: white; max-width: 420px; }
 
 .quoteMarkDecor {
   display: block;
@@ -306,18 +309,21 @@ em { color: var(--gold); font-style: italic; }
 /* ─── Difference — full-bleed hands photo ────────────────── */
 
 .difference {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   min-height: 580px;
-  background:
-    linear-gradient(to right,
-      rgba(26,22,16,0.05) 0%,
-      rgba(26,22,16,0.65) 42%,
-      rgba(26,22,16,0.9) 100%),
-    url("/hands.png") center / cover;
+}
+
+.differencePhoto {
+  background: url("/hands.png") center / cover;
+}
+
+.differenceRight {
+  background: var(--cream);
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  padding: 90px 7%;
-  color: white;
+  padding: 80px 7%;
+  color: var(--text);
 }
 
 .differenceContent { max-width: 480px; }
@@ -373,7 +379,7 @@ em { color: var(--gold); font-style: italic; }
   font-family: var(--font-sans);
 }
 
-.differenceList p { color: rgba(250,245,236,0.6); line-height: 1.75; font-size: 0.88rem; }
+.differenceList p { color: var(--muted); line-height: 1.75; font-size: 0.88rem; }
 
 /* ─── Contact — merged statement + CTA ──────────────────── */
 
