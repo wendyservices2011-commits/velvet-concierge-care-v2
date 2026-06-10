@@ -384,6 +384,13 @@ em { color: var(--gold); font-style: italic; }
   font-size: 1rem;
 }
 
+/* ─── Cream separator between stacked images ────────────── */
+
+.imageSeparator {
+  height: 80px;
+  background: var(--cream);
+}
+
 /* ─── Difference — full-bleed hands photo ────────────────── */
 
 .difference {

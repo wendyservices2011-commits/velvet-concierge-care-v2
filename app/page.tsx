@@ -87,6 +87,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Cream separator between stacked images */}
+      <div className="imageSeparator" />
+
       {/* Cinematic: hands photo */}
       <section id="services" className="difference">
         <div className="differenceContent">
