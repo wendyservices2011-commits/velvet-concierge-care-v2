@@ -1050,6 +1050,90 @@ details[open] summary::after { transform: rotate(45deg); }
 
 /* ─── Responsive ─────────────────────────────────────────── */
 
+@media (max-width: 640px) {
+  .hero {
+    padding: 130px 6% 70px;
+    min-height: 100svh;
+    background:
+      linear-gradient(to bottom,
+        rgba(250,245,236,0.96) 0%,
+        rgba(250,245,236,0.88) 50%,
+        rgba(250,245,236,0.72) 100%),
+      url("/hero2.jpg") center / cover;
+    align-items: flex-start;
+  }
+
+  .heroLeft { max-width: 100%; }
+
+  .heroEyebrow {
+    white-space: normal;
+    font-size: 0.58rem;
+    margin-bottom: 20px;
+  }
+
+  .heroLeft h1 { font-size: clamp(2.4rem, 10vw, 3.2rem); margin-bottom: 20px; }
+  .heroLeft > p { font-size: 0.88rem; line-height: 1.75; margin-bottom: 32px; max-width: 100%; }
+
+  .intro { padding: 64px 6% 72px; }
+  .intro h2 { font-size: clamp(2.4rem, 12vw, 3.8rem); margin-bottom: 28px; }
+  .intro p { font-size: 0.9rem; }
+
+  .storyImage { min-height: 380px; padding: 48px 6%; }
+  .testimonial p { font-size: clamp(1.4rem, 6vw, 2rem); }
+  .quoteMarkDecor { font-size: 5rem; }
+
+  .difference {
+    min-height: 0;
+    padding: 60px 6%;
+    background:
+      linear-gradient(to bottom, rgba(26,22,16,0.5) 0%, rgba(26,22,16,0.88) 60%),
+      url("/hands.png") center / cover;
+    justify-content: flex-start;
+  }
+  .differenceContent { max-width: 100%; }
+  .difference h2 { font-size: clamp(2rem, 9vw, 3rem); margin-bottom: 28px; }
+
+  .contactMerged { padding: 72px 6% 80px; }
+  .contactStatement { font-size: clamp(1.2rem, 5vw, 1.6rem); margin-bottom: 40px; padding-bottom: 40px; }
+  .contactCta h2 { font-size: clamp(2.2rem, 9vw, 3.2rem); }
+
+  footer {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 48px 6%;
+    text-align: center;
+  }
+  .footerLogo { margin: 0 auto; }
+  .footerLinks { justify-content: center; flex-direction: row; flex-wrap: wrap; gap: 16px 20px; }
+  .footerContact { text-align: center; }
+
+  .pageHero { padding: 70px 6% 72px; }
+  .pageHero h1 { font-size: clamp(2.4rem, 9vw, 3.5rem); }
+
+  .contact { padding: 72px 6%; }
+  .contact h2 { font-size: clamp(2rem, 9vw, 3rem); }
+
+  .portraitGrid { grid-template-columns: 1fr; }
+  .portrait { padding: 44px 6%; }
+
+  .servicesSection { padding: 72px 6%; }
+  .servicesGrid { grid-template-columns: 1fr; gap: 44px; }
+  .serviceNote { grid-template-columns: 1fr; padding: 32px 6%; }
+
+  .aboutStory { grid-template-columns: 1fr; gap: 40px; padding: 64px 6%; }
+  .aboutStoryLeft { position: static; }
+  .aboutValues { padding: 64px 6%; }
+  .aboutValuesGrid { grid-template-columns: 1fr; gap: 36px; }
+  .aboutMission { padding: 80px 6%; }
+
+  .faqSection { padding: 64px 6%; }
+
+  .consultHero { padding: 70px 6% 72px; }
+  .consultSection { padding: 48px 6% 72px; }
+  .consultCard { max-width: 100%; }
+  .consultProgressLine { width: 28px; }
+}
+
 @media (max-width: 1000px) {
   .nav nav, .navCta { display: none; }
   .hamburger { display: flex; }
