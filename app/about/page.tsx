@@ -1,3 +1,4 @@
+import Image from "next/image";
 import SiteNav from "@/app/components/SiteNav";
 import SiteFooter from "@/app/components/SiteFooter";
 import SiteContactCta from "@/app/components/SiteContactCta";
@@ -25,6 +26,13 @@ export default function AboutPage() {
           <div className="aboutStoryLeft">
             <p className="eyebrow">Our Founder</p>
             <h2>Fifteen years in nursing.<br />Every one of them <em>at home.</em></h2>
+            <Image
+              src="/wendy.jpg"
+              alt="Wendy Bien-Aime, RN — Founder of Velvet Concierge Care"
+              width={480}
+              height={560}
+              style={{ width: "100%", height: "auto", borderRadius: "4px", marginBottom: "24px", marginTop: "16px" }}
+            />
             <p className="aboutCredential">Wendy Bien-Aime, RN</p>
             <p className="aboutCredential">Licensed since 2010</p>
             <p className="aboutCredential">Royal Palm Beach, Florida</p>
