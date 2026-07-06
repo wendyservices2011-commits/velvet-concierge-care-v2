@@ -1085,7 +1085,14 @@ details[open] summary::after { transform: rotate(45deg); }
   .intro h2 { font-size: clamp(2.4rem, 12vw, 3.8rem); margin-bottom: 28px; }
   .intro p { font-size: 0.9rem; }
 
-  .storyImage { min-height: 380px; padding: 48px 6%; }
+  .storyImage {
+    min-height: 380px;
+    padding: 48px 6%;
+    background:
+      linear-gradient(rgba(26,22,16,0.82), rgba(26,22,16,0.92)),
+      url("/home-interior.png") center / cover;
+    justify-content: flex-start;
+  }
   .testimonial p { font-size: clamp(1.4rem, 6vw, 2rem); }
   .quoteMarkDecor { font-size: 5rem; }
 
@@ -1093,7 +1100,7 @@ details[open] summary::after { transform: rotate(45deg); }
     min-height: 0;
     padding: 60px 6%;
     background:
-      linear-gradient(to bottom, rgba(26,22,16,0.5) 0%, rgba(26,22,16,0.88) 60%),
+      linear-gradient(to bottom, rgba(26,22,16,0.82) 0%, rgba(26,22,16,0.95) 100%),
       url("/hands.png") center / cover;
     justify-content: flex-start;
   }

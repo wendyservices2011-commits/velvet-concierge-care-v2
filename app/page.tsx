@@ -44,15 +44,16 @@ export default function Home() {
       {/* Hero */}
       <section className="hero">
         <div className="heroLeft">
-          <p className="heroEyebrow">Private Duty Nursing · Palm Beach County</p>
+          <p className="heroEyebrow">Homemaker &amp; Companion Services · Palm Beach County</p>
           <h1>
             The comfort of home.<br />
-            The confidence of<br />
-            <em>nursing expertise.</em>
+            The support of someone<br />
+            <em>who truly knows care.</em>
           </h1>
           <p>
-            Private in-home support and RN-led care for seniors, adults
-            recovering from surgery, and the families who love them.
+            Private homemaker and companion services for seniors, adults
+            recovering from surgery, and the families who love them —
+            guided by a Registered Nurse.
           </p>
           <Link href="/consultation" className="goldButton">
             Schedule a Consultation <span>→</span>
@@ -103,8 +104,8 @@ export default function Home() {
             <div className="differenceItem">
               <span className="itemNum">01</span>
               <div>
-                <h3>RN-Led Oversight</h3>
-                <p>Registered Nurse expertise guiding every care plan and decision.</p>
+                <h3>RN Judgment &amp; Observation</h3>
+                <p>A Registered Nurse who notices what others miss and communicates directly with your loved one's medical team.</p>
               </div>
             </div>
             <div className="differenceItem">

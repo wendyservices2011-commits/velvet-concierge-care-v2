@@ -38,8 +38,8 @@ export default function FaqPage() {
           <details>
             <summary>How is Velvet different from a home health agency?</summary>
             <div className="faqAnswer">
-              <p>Home health agencies typically send different staff members at different times, operate within Medicare or Medicaid frameworks, and focus on short-term skilled nursing visits.</p>
-              <p style={{ marginTop: "12px" }}>Velvet is different in three ways. First, you work directly with a Registered Nurse — not a rotating roster of aides supervised from an office. Second, we offer both clinical nursing and lifestyle concierge support under one arrangement. Third, we have no insurance-imposed limitations on what we can do or how long we can do it.</p>
+              <p>Home health agencies typically focus on short-term skilled nursing visits, send different staff at different times, and operate within Medicare or Medicaid requirements.</p>
+              <p style={{ marginTop: "12px" }}>Velvet provides homemaker and companion services — a different category of care. You work directly with one consistent person who shows up knowing your loved one, rather than whoever happens to be scheduled. And because Wendy is also a Registered Nurse, she brings a level of observation, judgment, and medical communication that a typical homemaker service simply cannot offer.</p>
             </div>
           </details>
 
@@ -60,7 +60,7 @@ export default function FaqPage() {
           <details>
             <summary>What personal care services do you offer?</summary>
             <div className="faqAnswer">
-              <p>We provide assistance with activities of daily living — including bathing, grooming, dressing, and mobility support — delivered with the discretion and dignity your loved one deserves. Because personal care needs are deeply individual, we discuss the full scope privately during the initial consultation.</p>
+              <p>We provide homemaker and companion services including assistance with activities of daily living — bathing, grooming, dressing, and mobility support — along with meal preparation, light housekeeping, transportation, medication reminders, and companionship. Because every person's needs are different, we talk through the details privately during your consultation.</p>
             </div>
           </details>
 
@@ -79,9 +79,9 @@ export default function FaqPage() {
           </details>
 
           <details>
-            <summary>My family member has a specific device or condition. Can you help?</summary>
+            <summary>My family member has a specific condition or complex needs. Can you help?</summary>
             <div className="faqAnswer">
-              <p>We care for clients with a range of clinical needs including G-tube care, tracheostomy care, wound care, and complex medication regimens. The best way to find out if we're the right fit is to have a conversation. We'll be honest with you about what we can offer.</p>
+              <p>We work with clients managing chronic illness, memory changes, post-surgical recovery, and a range of other conditions. The best way to find out if we're the right fit is to have a conversation. We'll be honest with you about what we can offer and refer you appropriately if something falls outside our scope.</p>
             </div>
           </details>
 
