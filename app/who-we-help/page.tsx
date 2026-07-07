@@ -27,10 +27,10 @@ export default function WhoWeHelpPage() {
               <p>She's still sharp. Still herself. But the little things are getting harder — managing medications, keeping appointments, the daily rhythms that used to feel effortless. Her family worries. She refuses to leave.</p>
               <p>What she needs isn't a facility. It's the right person. Velvet provides discreet, professional support that preserves her independence and gives her family peace of mind.</p>
               <ul className="portraitServices">
-                <li>Medication management</li>
-                <li>Daily wellness monitoring</li>
+                <li>Medication reminders</li>
                 <li>Personal care support</li>
                 <li>Companionship and routine</li>
+                <li>Errands and household support</li>
                 <li>Family communication and updates</li>
               </ul>
             </div>
@@ -39,13 +39,13 @@ export default function WhoWeHelpPage() {
               <span className="portraitNum">02</span>
               <h3>The patient coming home from the hospital.</h3>
               <p>Hip replacement. Cardiac procedure. Cancer surgery. The hospital says you're ready to go home — but home doesn't feel ready. The discharge papers are overwhelming. Someone needs to be there who actually knows what they're doing.</p>
-              <p>We bridge the gap between inpatient care and true recovery, with RN-level oversight in the comfort of your own home.</p>
+              <p>We bridge the gap between inpatient care and true recovery, with attentive companion support in the comfort of your own home.</p>
               <ul className="portraitServices">
-                <li>Post-surgical wound care</li>
-                <li>Medication administration</li>
-                <li>Vital signs monitoring</li>
-                <li>Physician care coordination</li>
-                <li>Recovery support and education</li>
+                <li>Personal care assistance</li>
+                <li>Medication reminders</li>
+                <li>Transportation to follow-up appointments</li>
+                <li>Meal preparation and errands</li>
+                <li>Family communication and updates</li>
               </ul>
             </div>
 
@@ -67,13 +67,13 @@ export default function WhoWeHelpPage() {
               <span className="portraitNum">04</span>
               <h3>The patient navigating a new diagnosis.</h3>
               <p>Diabetes. Heart failure. Parkinson's. Early memory changes. A new diagnosis changes everything — the medications, the monitoring, the routines, the fear. Most families are not equipped to manage it alone.</p>
-              <p>We bring clinical expertise and calm steadiness to the learning curve — educating, monitoring, adjusting, and advocating so your loved one can live as fully as possible.</p>
+              <p>We bring calm, steady support to the learning curve — showing up consistently, helping with daily routines, and keeping families informed every step of the way.</p>
               <ul className="portraitServices">
-                <li>Chronic disease management</li>
-                <li>Patient and family education</li>
-                <li>Medication management</li>
-                <li>Specialist coordination</li>
-                <li>Ongoing monitoring and adjustment</li>
+                <li>Companionship and emotional support</li>
+                <li>Medication reminders</li>
+                <li>Transportation to specialist appointments</li>
+                <li>Meal preparation and household support</li>
+                <li>Regular family updates</li>
               </ul>
             </div>
 
