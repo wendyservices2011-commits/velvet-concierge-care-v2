@@ -96,7 +96,7 @@ export default function Home() {
         <div className="differenceContent">
           <p className="eyebrow">The Velvet Difference</p>
           <h2>
-            Clinical expertise.<br />
+            Genuine support.<br />
             Thoughtful care.<br />
             <em>Unwavering attention.</em>
           </h2>
