@@ -68,6 +68,44 @@ export default function ServicesPage() {
               </div>
             </div>
 
+            <div className="serviceCategory">
+              <p className="eyebrow">Respite Care</p>
+              <h3>Support for the<br /><em>family caregiver.</em></h3>
+              <div className="serviceDivider" />
+
+              <div className="serviceItem">
+                <h4>Relief for Family Caregivers</h4>
+                <p>Caring for a loved one is one of the most demanding responsibilities a family can take on. We step in so you can step away — for an afternoon, a few days, or longer — knowing your loved one is in capable, caring hands.</p>
+              </div>
+              <div className="serviceItem">
+                <h4>Scheduled &amp; Flexible Coverage</h4>
+                <p>Respite support can be arranged on a regular schedule or as needed. We work around your family's rhythm so you can rest without worry.</p>
+              </div>
+              <div className="serviceItem">
+                <h4>Companionship &amp; Routine Maintenance</h4>
+                <p>While you're away, your loved one's daily routines, meals, medication reminders, and social connection continue without interruption.</p>
+              </div>
+            </div>
+
+            <div className="serviceCategory">
+              <p className="eyebrow">Snowbird Season</p>
+              <h3>Seasonal support for<br /><em>Palm Beach residents.</em></h3>
+              <div className="serviceDivider" />
+
+              <div className="serviceItem">
+                <h4>Seasonal Companion Care</h4>
+                <p>Whether you're arriving for the season or winding down before heading north, Velvet provides seamless companion and homemaker support tailored to your schedule — no long-term commitment required.</p>
+              </div>
+              <div className="serviceItem">
+                <h4>Home Transition Support</h4>
+                <p>We help you or your loved one settle in comfortably — grocery stocking, errand runs, appointment scheduling, and daily support from day one of your arrival.</p>
+              </div>
+              <div className="serviceItem">
+                <h4>Flexible Engagement</h4>
+                <p>Seasonal clients receive the same attentive, personalized care as year-round clients. We're here for the season — and ready to resume the moment you return.</p>
+              </div>
+            </div>
+
           </div>
 
           <div className="serviceNote">
