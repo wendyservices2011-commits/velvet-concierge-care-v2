@@ -25,7 +25,7 @@ export default function AboutPage() {
         <section className="aboutStory">
           <div className="aboutStoryLeft">
             <p className="eyebrow">Our Founder</p>
-            <h2>Fifteen years in nursing.<br />Every one of them <em>at home.</em></h2>
+            <h2>Fifteen years of care.<br />Every one of them <em>at home.</em></h2>
             <Image
               src="/wendy.jpg"
               alt="Wendy Bien-Aime, RN — Founder of Velvet Concierge Care"

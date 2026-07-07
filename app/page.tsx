@@ -104,8 +104,8 @@ export default function Home() {
             <div className="differenceItem">
               <span className="itemNum">01</span>
               <div>
-                <h3>RN Judgment &amp; Observation</h3>
-                <p>A Registered Nurse who notices what others miss and communicates directly with your loved one's medical team.</p>
+                <h3>Attentive, Experienced Care</h3>
+                <p>Someone who notices what others miss and shows up consistently, with the experience to handle whatever your loved one needs.</p>
               </div>
             </div>
             <div className="differenceItem">

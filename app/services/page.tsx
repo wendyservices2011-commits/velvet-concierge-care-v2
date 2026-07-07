@@ -72,8 +72,8 @@ export default function ServicesPage() {
 
           <div className="serviceNote">
             <div>
-              <h4>The RN Advantage</h4>
-              <p>Wendy's background as a Registered Nurse means she brings clinical observation, sound judgment, and the ability to communicate effectively with your loved one's medical team — qualities that go well beyond what a typical homemaker service can offer.</p>
+              <h4>The Velvet Advantage</h4>
+              <p>Wendy's extensive background in home-based care means she brings a level of attentiveness, sound judgment, and professionalism that goes well beyond what a typical homemaker service can offer.</p>
             </div>
             <div>
               <h4>Private Pay</h4>
