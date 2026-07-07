@@ -857,6 +857,58 @@ footer {
 
 .portraitServices li::before { content: "—"; position: absolute; left: 0; opacity: 0.4; }
 
+/* ─── Signs Section ──────────────────────────────────────── */
+
+.signsSection {
+  background: var(--cream);
+  padding: 100px 7%;
+}
+
+.signsInner {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.signsIntro {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--text-light);
+  margin-bottom: 48px;
+  margin-top: 24px;
+}
+
+.signsList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px;
+  border-top: 1px solid rgba(26,22,16,0.1);
+}
+
+.signsList li {
+  padding: 18px 0 18px 28px;
+  border-bottom: 1px solid rgba(26,22,16,0.1);
+  position: relative;
+  font-size: 0.97rem;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.signsList li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  opacity: 0.7;
+}
+
+.signsClose {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--text);
+  font-style: italic;
+}
+
 /* ─── Services ───────────────────────────────────────────── */
 
 .servicesSection { padding: 100px 7%; background: var(--ivory); }

@@ -80,6 +80,27 @@ export default function WhoWeHelpPage() {
           </div>
         </section>
 
+        <section className="signsSection">
+          <div className="signsInner">
+            <p className="eyebrow">Know the Signs</p>
+            <h2>Sometimes the need for support<br /><em>sneaks up quietly.</em></h2>
+            <p className="signsIntro">Families often notice small changes before they realize what they mean. If any of these sound familiar, it may be time to have a conversation.</p>
+            <ul className="signsList">
+              <li>Struggling to keep up with household tasks that used to feel effortless</li>
+              <li>Missing medications or doctor appointments</li>
+              <li>Changes in personal grooming or appearance</li>
+              <li>Noticeable weight loss or skipping meals</li>
+              <li>Withdrawing from friends, family, or activities they once enjoyed</li>
+              <li>Increased forgetfulness or confusion</li>
+              <li>Mail piling up, expired food, or a home that feels neglected</li>
+              <li>Difficulty getting around safely or recovering after a hospital stay</li>
+              <li>A family caregiver who is exhausted and needs relief</li>
+              <li>A gut feeling that something has changed — even if you can't quite name it</li>
+            </ul>
+            <p className="signsClose">You don't need to have it all figured out to reach out. We're happy to listen and help you think it through.</p>
+          </div>
+        </section>
+
         <SiteContactCta />
       </main>
       <SiteFooter />
