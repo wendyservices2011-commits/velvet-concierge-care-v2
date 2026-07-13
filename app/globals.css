@@ -883,7 +883,7 @@ em { color: var(--gold); font-style: italic; }
 
 footer {
   padding: 60px 7%;
-  background: var(--black);
+  background: var(--brown);
   color: var(--ivory);
   display: flex;
   flex-direction: column;
