@@ -813,7 +813,7 @@ em { color: var(--gold); font-style: italic; }
 
 .servicesPreview {
   padding: 100px 7%;
-  background: var(--cream);
+  background: var(--ivory);
 }
 
 .servicesPreviewHead {
@@ -855,7 +855,7 @@ em { color: var(--gold); font-style: italic; }
 }
 
 .servicesPreviewCard {
-  background: var(--sand);
+  background: var(--ivory);
   padding: 52px 44px;
   display: flex;
   flex-direction: column;
