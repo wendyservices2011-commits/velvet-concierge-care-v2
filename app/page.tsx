@@ -79,9 +79,9 @@ export default function Home() {
       {/* Intro — enormous type */}
       <section className="intro">
         <h2>
-          Our mission is not<br />
-          to replace the family —<br />
-          <em>but to give them the freedom<br />to simply be family again.</em>
+          Home is where<br />
+          life happens.<br />
+          <em>We're here to help<br />you live it well.</em>
         </h2>
         <p>
           Whether you're aging at home, recovering from surgery, managing
@@ -97,9 +97,8 @@ export default function Home() {
           <h2 className="founderName">Wendy Bien-Aime, RN</h2>
           <p className="founderTitle">Founder, Velvet Concierge Care</p>
           <blockquote className="founderQuote">
-            &ldquo;After caring for families for over fifteen years, I created Velvet Concierge Care
-            to provide the kind of thoughtful, dependable support I once wished
-            my own family had.&rdquo;
+            &ldquo;Our mission is not to replace the family — but to give them
+            the freedom to simply be family again.&rdquo;
           </blockquote>
           <a href="/about" className="founderLink">Read My Story →</a>
         </div>
