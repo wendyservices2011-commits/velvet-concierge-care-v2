@@ -606,7 +606,7 @@ em { color: var(--gold); font-style: italic; }
 
 .contactMerged {
   padding: 120px 7% 130px;
-  background: var(--cream);
+  background: var(--ivory);
   display: flex;
   flex-direction: column;
   align-items: center;
