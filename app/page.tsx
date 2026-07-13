@@ -160,44 +160,24 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services preview — summary cards above footer */}
+      {/* Services preview — 3 cards, Lovable style */}
       <section className="servicesPreview">
         <div className="servicesPreviewHead">
-          <p className="eyebrow">Our Services</p>
-          <Link href="/services" className="servicesPreviewLink">View All Services →</Link>
+          <h2 className="servicesPreviewTitle">Our Services</h2>
+          <Link href="/services" className="servicesPreviewLink">Tailored For You</Link>
         </div>
         <div className="servicesPreviewGrid">
           <div className="servicesPreviewCard">
-            <h3>Companionship</h3>
-            <p>Meaningful connection and social engagement that supports emotional wellbeing.</p>
+            <h3>Companion Care</h3>
+            <p>Meaningful conversation, shared meals, and social engagement tailored to your loved one's interests.</p>
           </div>
           <div className="servicesPreviewCard">
-            <h3>Meal Preparation</h3>
-            <p>Fresh, home-cooked meals tailored to dietary needs and preferences.</p>
+            <h3>Homemaking</h3>
+            <p>Light housekeeping, laundry, and meal preparation to keep the home comfortable and serene.</p>
           </div>
           <div className="servicesPreviewCard">
-            <h3>Errands &amp; Transportation</h3>
-            <p>Grocery runs, pharmacy pickups, and safe rides to appointments.</p>
-          </div>
-          <div className="servicesPreviewCard">
-            <h3>Light Housekeeping</h3>
-            <p>Tidying, laundry, and light tasks that keep the home safe and comfortable.</p>
-          </div>
-          <div className="servicesPreviewCard">
-            <h3>Medication Reminders</h3>
-            <p>Consistent reminders so prescriptions are never missed.</p>
-          </div>
-          <div className="servicesPreviewCard">
-            <h3>Wellness Checks</h3>
-            <p>Scheduled visits that keep families informed and loved ones safe.</p>
-          </div>
-          <div className="servicesPreviewCard">
-            <h3>Respite Care</h3>
-            <p>Relief for family caregivers — scheduled or as needed, with full continuity of care.</p>
-          </div>
-          <div className="servicesPreviewCard">
-            <h3>Snowbird Support</h3>
-            <p>Seasonal companion and homemaker care for Palm Beach residents — no long-term commitment required.</p>
+            <h3>Transportation</h3>
+            <p>Safe, comfortable transit to appointments, social engagements, and errands.</p>
           </div>
         </div>
       </section>

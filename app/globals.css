@@ -818,22 +818,31 @@ em { color: var(--gold); font-style: italic; }
 
 .servicesPreviewHead {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 24px;
   margin-bottom: 40px;
 }
 
+.servicesPreviewTitle {
+  font-family: var(--font-serif);
+  font-size: clamp(2.4rem, 4vw, 4rem);
+  font-weight: 400;
+  color: var(--text);
+  line-height: 1;
+}
+
 .servicesPreviewLink {
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   text-transform: uppercase;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.18em;
   font-weight: 600;
   color: var(--gold);
-  border-bottom: 1px solid rgba(140,106,40,0.45);
+  border-bottom: 1px solid var(--gold);
   padding-bottom: 3px;
   white-space: nowrap;
   flex-shrink: 0;
+  margin-top: 12px;
   transition: opacity 0.2s;
 }
 .servicesPreviewLink:hover { opacity: 0.7; }
@@ -841,30 +850,33 @@ em { color: var(--gold); font-style: italic; }
 .servicesPreviewGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  gap: 0;
+  border: 1px solid rgba(26,22,16,0.1);
 }
 
 .servicesPreviewCard {
-  background: var(--ivory);
-  border-radius: 10px;
-  padding: 32px 28px;
+  background: var(--sand);
+  padding: 52px 44px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
+  border-right: 1px solid rgba(26,22,16,0.1);
 }
+
+.servicesPreviewCard:last-child { border-right: none; }
 
 .servicesPreviewCard h3 {
   font-family: var(--font-serif);
-  font-size: 1.25rem;
+  font-size: clamp(1.6rem, 2.2vw, 2rem);
   font-weight: 400;
   color: var(--text);
-  line-height: 1.2;
+  line-height: 1.15;
 }
 
 .servicesPreviewCard p {
-  font-size: 0.88rem;
+  font-size: 0.9rem;
   color: var(--muted);
-  line-height: 1.7;
+  line-height: 1.75;
 }
 
 /* ─── Footer ─────────────────────────────────────────────── */
@@ -1476,8 +1488,10 @@ details[open] summary::after { transform: rotate(45deg); }
   .difference h2 { font-size: clamp(2rem, 9vw, 3rem); margin-bottom: 28px; }
 
   .servicesPreview { padding: 64px 6%; }
-  .servicesPreviewHead { flex-direction: column; align-items: flex-start; gap: 16px; }
-  .servicesPreviewGrid { grid-template-columns: 1fr; gap: 12px; }
+  .servicesPreviewHead { flex-direction: column; gap: 12px; }
+  .servicesPreviewGrid { grid-template-columns: 1fr; }
+  .servicesPreviewCard { border-right: none; border-bottom: 1px solid rgba(26,22,16,0.1); padding: 36px 28px; }
+  .servicesPreviewCard:last-child { border-bottom: none; }
 
   .contactMerged { padding: 72px 6% 80px; }
   .contactStatement { font-size: clamp(1.2rem, 5vw, 1.6rem); margin-bottom: 40px; padding-bottom: 40px; }
