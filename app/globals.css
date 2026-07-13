@@ -731,10 +731,11 @@ footer {
   padding: 60px 7%;
   background: var(--black);
   color: var(--ivory);
-  display: grid;
-  grid-template-columns: 1fr 1.8fr 1fr;
-  gap: 40px;
-  align-items: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 32px;
 }
 
 .footerLogo span, .footerLogo small { color: var(--ivory); }
@@ -756,13 +757,14 @@ footer {
   letter-spacing: 0.14em;
   font-weight: 500;
   flex-wrap: wrap;
-  padding-top: 4px;
+  justify-content: center;
+  padding-top: 0;
 }
 
 .footerLinks a { opacity: 0.45; transition: opacity 0.2s; }
 .footerLinks a:hover { opacity: 1; }
 
-.footerContact { color: rgba(250,245,236,0.35); line-height: 1.9; font-size: 1rem; }
+.footerContact { color: rgba(250,245,236,0.35); line-height: 1.9; font-size: 1rem; text-align: center; }
 
 /* ─── Interior nav ───────────────────────────────────────── */
 
