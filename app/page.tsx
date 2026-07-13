@@ -160,6 +160,48 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Services preview — 3 cards above footer */}
+      <section className="servicesPreview">
+        <div className="servicesPreviewHead">
+          <p className="eyebrow">Our Services</p>
+          <h2>Everything your family<br /><em>needs, under one roof.</em></h2>
+          <Link href="/services" className="servicesPreviewLink">View All Services →</Link>
+        </div>
+        <div className="servicesPreviewGrid">
+          <div className="servicesPreviewCard">
+            <p className="servicesPreviewCategory">Homemaker &amp; Companion</p>
+            <ul className="servicesPreviewList">
+              <li>Companionship &amp; Social Engagement</li>
+              <li>Personal Care Assistance</li>
+              <li>Meal Planning &amp; Preparation</li>
+              <li>Grocery Shopping &amp; Errands</li>
+              <li>Light Housekeeping</li>
+              <li>Transportation to Appointments</li>
+              <li>Medical Appointment Accompaniment</li>
+              <li>Medication Reminders</li>
+              <li>Wellness Checks</li>
+              <li>Family Communication &amp; Updates</li>
+            </ul>
+          </div>
+          <div className="servicesPreviewCard">
+            <p className="servicesPreviewCategory">Respite Care</p>
+            <ul className="servicesPreviewList">
+              <li>Relief for Family Caregivers</li>
+              <li>Scheduled &amp; Flexible Coverage</li>
+              <li>Companionship &amp; Routine Maintenance</li>
+            </ul>
+          </div>
+          <div className="servicesPreviewCard">
+            <p className="servicesPreviewCategory">Snowbird Season</p>
+            <ul className="servicesPreviewList">
+              <li>Seasonal Companion Care</li>
+              <li>Home Transition Support</li>
+              <li>Flexible Engagement</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       {/* Floating call button */}
       <a href="tel:5168536445" className="floatCall">
         <span className="floatCallIcon">✆</span>
