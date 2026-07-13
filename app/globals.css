@@ -851,7 +851,6 @@ em { color: var(--gold); font-style: italic; }
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0;
-  border: 1px solid rgba(26,22,16,0.1);
 }
 
 .servicesPreviewCard {
@@ -860,10 +859,7 @@ em { color: var(--gold); font-style: italic; }
   display: flex;
   flex-direction: column;
   gap: 20px;
-  border-right: 1px solid rgba(26,22,16,0.1);
 }
-
-.servicesPreviewCard:last-child { border-right: none; }
 
 .servicesPreviewCard h3 {
   font-family: var(--font-serif);
