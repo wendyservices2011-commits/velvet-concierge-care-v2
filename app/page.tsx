@@ -172,10 +172,6 @@ export default function Home() {
             <p>Meaningful connection and social engagement that supports emotional wellbeing.</p>
           </div>
           <div className="servicesPreviewCard">
-            <h3>Personal Care</h3>
-            <p>Dignified assistance with bathing, grooming, dressing, and daily living.</p>
-          </div>
-          <div className="servicesPreviewCard">
             <h3>Meal Preparation</h3>
             <p>Fresh, home-cooked meals tailored to dietary needs and preferences.</p>
           </div>

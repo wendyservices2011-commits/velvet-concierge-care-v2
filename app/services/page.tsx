@@ -31,10 +31,6 @@ export default function ServicesPage() {
                 <p>Meaningful conversation, shared activities, and genuine human connection — because wellbeing is about far more than physical health.</p>
               </div>
               <div className="serviceItem">
-                <h4>Personal Care Assistance</h4>
-                <p>Sensitive, dignified assistance with activities of daily living — including bathing, grooming, dressing, and mobility support. Delivered with the discretion your loved one deserves.</p>
-              </div>
-              <div className="serviceItem">
                 <h4>Meal Planning &amp; Preparation</h4>
                 <p>Home-cooked meals aligned with dietary preferences and nutritional needs — prepared fresh, with care, in your loved one's own kitchen.</p>
               </div>
