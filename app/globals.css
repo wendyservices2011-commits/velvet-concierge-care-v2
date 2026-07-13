@@ -818,20 +818,10 @@ em { color: var(--gold); font-style: italic; }
 
 .servicesPreviewHead {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
-  gap: 40px;
-  margin-bottom: 56px;
-  padding-bottom: 48px;
-  border-bottom: 1px solid rgba(26,22,16,0.1);
-}
-
-.servicesPreviewHead h2 {
-  font-family: var(--font-serif);
-  font-size: clamp(2rem, 3vw, 3.6rem);
-  font-weight: 400;
-  line-height: 1.1;
-  color: var(--text);
+  gap: 24px;
+  margin-bottom: 40px;
 }
 
 .servicesPreviewLink {
@@ -850,54 +840,31 @@ em { color: var(--gold); font-style: italic; }
 
 .servicesPreviewGrid {
   display: grid;
-  grid-template-columns: 1.6fr 1fr 1fr;
-  gap: 2px;
-  background: rgba(26,22,16,0.09);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
 }
 
 .servicesPreviewCard {
   background: var(--ivory);
-  padding: 40px 36px;
+  border-radius: 10px;
+  padding: 32px 28px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
 }
 
-.servicesPreviewCategory {
-  font-size: 0.68rem;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  font-weight: 600;
-  color: var(--gold);
-  font-family: var(--font-sans);
-}
-
-.servicesPreviewList {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-}
-
-.servicesPreviewList li {
-  font-size: 0.9rem;
+.servicesPreviewCard h3 {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 400;
   color: var(--text);
-  line-height: 1.5;
-  padding: 10px 0;
-  border-bottom: 1px solid rgba(26,22,16,0.07);
-  padding-left: 14px;
-  position: relative;
+  line-height: 1.2;
 }
 
-.servicesPreviewList li::before {
-  content: "—";
-  position: absolute;
-  left: 0;
-  color: var(--gold);
-  opacity: 0.5;
-  font-size: 0.75rem;
+.servicesPreviewCard p {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.7;
 }
 
 /* ─── Footer ─────────────────────────────────────────────── */
@@ -1509,8 +1476,8 @@ details[open] summary::after { transform: rotate(45deg); }
   .difference h2 { font-size: clamp(2rem, 9vw, 3rem); margin-bottom: 28px; }
 
   .servicesPreview { padding: 64px 6%; }
-  .servicesPreviewHead { flex-direction: column; align-items: flex-start; gap: 20px; }
-  .servicesPreviewGrid { grid-template-columns: 1fr; }
+  .servicesPreviewHead { flex-direction: column; align-items: flex-start; gap: 16px; }
+  .servicesPreviewGrid { grid-template-columns: 1fr; gap: 12px; }
 
   .contactMerged { padding: 72px 6% 80px; }
   .contactStatement { font-size: clamp(1.2rem, 5vw, 1.6rem); margin-bottom: 40px; padding-bottom: 40px; }

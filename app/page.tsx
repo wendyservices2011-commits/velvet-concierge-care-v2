@@ -160,44 +160,48 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services preview — 3 cards above footer */}
+      {/* Services preview — summary cards above footer */}
       <section className="servicesPreview">
         <div className="servicesPreviewHead">
           <p className="eyebrow">Our Services</p>
-          <h2>Everything your family<br /><em>needs, under one roof.</em></h2>
           <Link href="/services" className="servicesPreviewLink">View All Services →</Link>
         </div>
         <div className="servicesPreviewGrid">
           <div className="servicesPreviewCard">
-            <p className="servicesPreviewCategory">Homemaker &amp; Companion</p>
-            <ul className="servicesPreviewList">
-              <li>Companionship &amp; Social Engagement</li>
-              <li>Personal Care Assistance</li>
-              <li>Meal Planning &amp; Preparation</li>
-              <li>Grocery Shopping &amp; Errands</li>
-              <li>Light Housekeeping</li>
-              <li>Transportation to Appointments</li>
-              <li>Medical Appointment Accompaniment</li>
-              <li>Medication Reminders</li>
-              <li>Wellness Checks</li>
-              <li>Family Communication &amp; Updates</li>
-            </ul>
+            <h3>Companionship</h3>
+            <p>Meaningful connection and social engagement that supports emotional wellbeing.</p>
           </div>
           <div className="servicesPreviewCard">
-            <p className="servicesPreviewCategory">Respite Care</p>
-            <ul className="servicesPreviewList">
-              <li>Relief for Family Caregivers</li>
-              <li>Scheduled &amp; Flexible Coverage</li>
-              <li>Companionship &amp; Routine Maintenance</li>
-            </ul>
+            <h3>Personal Care</h3>
+            <p>Dignified assistance with bathing, grooming, dressing, and daily living.</p>
           </div>
           <div className="servicesPreviewCard">
-            <p className="servicesPreviewCategory">Snowbird Season</p>
-            <ul className="servicesPreviewList">
-              <li>Seasonal Companion Care</li>
-              <li>Home Transition Support</li>
-              <li>Flexible Engagement</li>
-            </ul>
+            <h3>Meal Preparation</h3>
+            <p>Fresh, home-cooked meals tailored to dietary needs and preferences.</p>
+          </div>
+          <div className="servicesPreviewCard">
+            <h3>Errands &amp; Transportation</h3>
+            <p>Grocery runs, pharmacy pickups, and safe rides to appointments.</p>
+          </div>
+          <div className="servicesPreviewCard">
+            <h3>Light Housekeeping</h3>
+            <p>Tidying, laundry, and light tasks that keep the home safe and comfortable.</p>
+          </div>
+          <div className="servicesPreviewCard">
+            <h3>Medication Reminders</h3>
+            <p>Consistent reminders so prescriptions are never missed.</p>
+          </div>
+          <div className="servicesPreviewCard">
+            <h3>Wellness Checks</h3>
+            <p>Scheduled visits that keep families informed and loved ones safe.</p>
+          </div>
+          <div className="servicesPreviewCard">
+            <h3>Respite Care</h3>
+            <p>Relief for family caregivers — scheduled or as needed, with full continuity of care.</p>
+          </div>
+          <div className="servicesPreviewCard">
+            <h3>Snowbird Support</h3>
+            <p>Seasonal companion and homemaker care for Palm Beach residents — no long-term commitment required.</p>
           </div>
         </div>
       </section>
