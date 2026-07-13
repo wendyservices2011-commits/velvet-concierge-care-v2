@@ -449,7 +449,87 @@ em { color: var(--gold); font-style: italic; }
   background: var(--cream);
 }
 
-/* ─── Difference — full-bleed hands photo ────────────────── */
+/* ─── Why Families Choose — two-column layout ───────────── */
+
+.whySection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+  padding: 100px 7%;
+  background: var(--ivory);
+}
+
+.whyLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.whyLeft h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 3.2vw, 4.2rem);
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--text);
+}
+
+.whyPhoto {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: url("/home-interior.png") center / cover;
+}
+
+.whyRight {
+  display: flex;
+  flex-direction: column;
+  padding-top: 6px;
+}
+
+.whyList {
+  display: flex;
+  flex-direction: column;
+  margin-top: 28px;
+}
+
+.whyItem {
+  display: flex;
+  gap: 22px;
+  padding: 28px 0;
+  border-bottom: 1px solid rgba(26,22,16,0.09);
+  align-items: flex-start;
+}
+
+.whyItem:first-child { border-top: 1px solid rgba(26,22,16,0.09); }
+
+.whyNum {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  color: var(--gold);
+  opacity: 0.5;
+  line-height: 0.85;
+  font-weight: 400;
+  flex-shrink: 0;
+  width: 36px;
+  user-select: none;
+}
+
+.whyList h3 {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--text);
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.whyList p {
+  color: var(--muted);
+  line-height: 1.8;
+  font-size: 0.9rem;
+}
+
+/* ─── Difference — full-bleed hands photo (kept for reference) */
 
 .difference {
   min-height: 580px;
@@ -1322,6 +1402,9 @@ details[open] summary::after { transform: rotate(45deg); }
   .founderName { font-size: clamp(1.8rem, 8vw, 2.4rem); }
   .founderQuote { font-size: clamp(1.1rem, 5vw, 1.4rem); }
 
+  .whySection { grid-template-columns: 1fr; gap: 48px; padding: 60px 6%; }
+  .whyPhoto { aspect-ratio: 16 / 9; }
+
   .difference {
     min-height: 0;
     padding: 60px 6%;
@@ -1392,6 +1475,8 @@ details[open] summary::after { transform: rotate(45deg); }
   .intro h2 { font-size: clamp(3rem, 11vw, 5.5rem); }
 
   .storyImage { min-height: 460px; padding: 60px 7%; }
+
+  .whySection { grid-template-columns: 1fr; gap: 52px; padding: 72px 7%; }
 
   .difference {
     min-height: 500px;

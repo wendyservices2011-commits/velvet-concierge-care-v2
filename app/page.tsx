@@ -90,32 +90,35 @@ export default function Home() {
         </p>
       </section>
 
-      {/* Cinematic: hands photo */}
-      <section id="services" className="difference">
-        <div className="differenceContent">
-          <p className="eyebrow">Why Families Choose Velvet Concierge Care</p>
+      {/* Why Families Choose — two column: headline+photo left, list right */}
+      <section id="services" className="whySection">
+        <div className="whyLeft">
           <h2>
             Genuine support.<br />
             Thoughtful care.<br />
             <em>Unwavering attention.</em>
           </h2>
-          <div className="differenceList">
-            <div className="differenceItem">
-              <span className="itemNum">01</span>
+          <div className="whyPhoto" />
+        </div>
+        <div className="whyRight">
+          <p className="eyebrow">Why Families Choose Velvet Concierge Care</p>
+          <div className="whyList">
+            <div className="whyItem">
+              <span className="whyNum">01</span>
               <div>
                 <h3>Attentive, Experienced Care</h3>
                 <p>Our caregivers are background-screened, trained, and supervised by a Registered Nurse. Someone who notices what others miss — and knows what to do about it.</p>
               </div>
             </div>
-            <div className="differenceItem">
-              <span className="itemNum">02</span>
+            <div className="whyItem">
+              <span className="whyNum">02</span>
               <div>
                 <h3>Personalized Support</h3>
                 <p>No two families are the same. Before care begins, we learn your loved one's routines, preferences, and needs — then build a plan around them, not the other way around.</p>
               </div>
             </div>
-            <div className="differenceItem">
-              <span className="itemNum">03</span>
+            <div className="whyItem">
+              <span className="whyNum">03</span>
               <div>
                 <h3>Clear Communication</h3>
                 <p>You'll never wonder what's happening. We keep families informed, involved, and at ease — because peace of mind is part of the service.</p>
@@ -124,9 +127,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Cream separator between stacked images */}
-      <div className="imageSeparator" />
 
       {/* Founder section — photo background with overlay */}
       <section className="storyImage">
