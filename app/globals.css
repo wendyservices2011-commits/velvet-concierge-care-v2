@@ -478,6 +478,7 @@ em { color: var(--gold); font-style: italic; }
   width: 100%;
   aspect-ratio: 4 / 3;
   background: url("/home-interior.png") center / cover;
+  border-radius: 12px;
 }
 
 .whyRight {
