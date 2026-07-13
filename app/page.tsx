@@ -90,23 +90,6 @@ export default function Home() {
         </p>
       </section>
 
-      {/* Founder section — photo background with overlay */}
-      <section className="storyImage">
-        <div className="founderInner">
-          <p className="eyebrow" style={{ color: "var(--gold)" }}>Meet the Founder</p>
-          <h2 className="founderName">Wendy Bien-Aime, RN</h2>
-          <p className="founderTitle">Founder, Velvet Concierge Care</p>
-          <blockquote className="founderQuote">
-            &ldquo;Our mission is not to replace the family — but to give them
-            the freedom to simply be family again.&rdquo;
-          </blockquote>
-          <a href="/about" className="founderLink">Read My Story →</a>
-        </div>
-      </section>
-
-      {/* Cream separator between stacked images */}
-      <div className="imageSeparator" />
-
       {/* Cinematic: hands photo */}
       <section id="services" className="difference">
         <div className="differenceContent">
@@ -139,6 +122,23 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Cream separator between stacked images */}
+      <div className="imageSeparator" />
+
+      {/* Founder section — photo background with overlay */}
+      <section className="storyImage">
+        <div className="founderInner">
+          <p className="eyebrow" style={{ color: "var(--gold)" }}>Meet the Founder</p>
+          <h2 className="founderName">Wendy Bien-Aime, RN</h2>
+          <p className="founderTitle">Founder, Velvet Concierge Care</p>
+          <blockquote className="founderQuote">
+            &ldquo;Our mission is not to replace the family — but to give them
+            the freedom to simply be family again.&rdquo;
+          </blockquote>
+          <a href="/about" className="founderLink">Read My Story →</a>
         </div>
       </section>
 
