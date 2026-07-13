@@ -199,9 +199,9 @@ export default function Home() {
           <Link href="/who-we-help">Who We Help</Link>
           <Link href="/about">About</Link>
           <Link href="/faq">FAQ</Link>
-          <a href="#contact">Contact</a>
         </div>
         <div className="footerContact">
+          <p className="footerContactLabel">Contact</p>
           <p>(516) 853-6445</p>
           <p><a href="mailto:info@velvetconciergecare.com">info@velvetconciergecare.com</a></p>
           <p>Serving Palm Beach County, FL</p>

@@ -913,7 +913,16 @@ footer {
 .footerLinks a { opacity: 0.45; transition: opacity 0.2s; }
 .footerLinks a:hover { opacity: 1; }
 
-.footerContact { color: rgba(250,245,236,0.35); line-height: 1.9; font-size: 1rem; text-align: center; }
+.footerContact { color: rgba(250,245,236,0.35); line-height: 1.9; font-size: 1rem; text-align: right; }
+
+.footerContactLabel {
+  font-size: 0.63rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-weight: 500;
+  color: rgba(250,245,236,0.45);
+  margin-bottom: 6px;
+}
 
 /* ─── Interior nav ───────────────────────────────────────── */
 
