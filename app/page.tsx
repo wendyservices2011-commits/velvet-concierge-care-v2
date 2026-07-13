@@ -59,6 +59,10 @@ export default function Home() {
           <Link href="/consultation" className="goldButton">
             Schedule a Consultation <span>→</span>
           </Link>
+          <div className="acceptingClients">
+            <span className="acceptingDot" />
+            Now Accepting New Clients
+          </div>
         </div>
         <div className="heroScroll"><span /></div>
       </section>
@@ -75,9 +79,9 @@ export default function Home() {
       {/* Intro — enormous type */}
       <section className="intro">
         <h2>
-          Home is where<br />
-          life happens.<br />
-          <em>We're here to help<br />you live it well.</em>
+          Our mission is not<br />
+          to replace the family —<br />
+          <em>but to give them the freedom<br />to simply be family again.</em>
         </h2>
         <p>
           Whether you're aging at home, recovering from surgery, managing
