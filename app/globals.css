@@ -1257,27 +1257,37 @@ details[open] summary::after { transform: rotate(45deg); }
 
   .heroEyebrow {
     white-space: normal;
-    font-size: 0.58rem;
+    font-size: 0.65rem;
     margin-bottom: 20px;
   }
 
   .heroLeft h1 { font-size: clamp(2.4rem, 10vw, 3.2rem); margin-bottom: 20px; }
-  .heroLeft > p { font-size: 0.88rem; line-height: 1.75; margin-bottom: 32px; max-width: 100%; }
+  .heroLeft > p { font-size: 0.95rem; line-height: 1.75; margin-bottom: 32px; max-width: 100%; }
+
+  .trustBar {
+    padding: 16px 6%;
+    gap: 16px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .trustItem { font-size: 0.62rem; }
 
   .intro { padding: 64px 6% 72px; }
   .intro h2 { font-size: clamp(2.4rem, 12vw, 3.8rem); margin-bottom: 28px; }
-  .intro p { font-size: 0.9rem; }
+  .intro p { font-size: 1rem; }
 
   .storyImage {
-    min-height: 380px;
+    min-height: 480px;
     padding: 48px 6%;
     background:
-      linear-gradient(rgba(26,22,16,0.82), rgba(26,22,16,0.92)),
+      linear-gradient(rgba(26,22,16,0.72), rgba(26,22,16,0.88)),
       url("/home-interior.png") center / cover;
     justify-content: flex-start;
   }
-  .testimonial p { font-size: clamp(1.4rem, 6vw, 2rem); }
-  .quoteMarkDecor { font-size: 5rem; }
+
+  .founderInner { max-width: 100%; }
+  .founderName { font-size: clamp(1.8rem, 8vw, 2.4rem); }
+  .founderQuote { font-size: clamp(1.1rem, 5vw, 1.4rem); }
 
   .difference {
     min-height: 0;
@@ -1293,6 +1303,9 @@ details[open] summary::after { transform: rotate(45deg); }
   .contactMerged { padding: 72px 6% 80px; }
   .contactStatement { font-size: clamp(1.2rem, 5vw, 1.6rem); margin-bottom: 40px; padding-bottom: 40px; }
   .contactCta h2 { font-size: clamp(2.2rem, 9vw, 3.2rem); }
+
+  .floatCall { bottom: 16px; right: 16px; padding: 12px 18px; }
+  .floatCallText { display: none; }
 
   footer {
     grid-template-columns: 1fr;
@@ -1329,6 +1342,8 @@ details[open] summary::after { transform: rotate(45deg); }
   .consultSection { padding: 48px 6% 72px; }
   .consultCard { max-width: 100%; }
   .consultProgressLine { width: 28px; }
+
+  .founderSection { padding: 72px 6%; }
 }
 
 @media (max-width: 1000px) {
