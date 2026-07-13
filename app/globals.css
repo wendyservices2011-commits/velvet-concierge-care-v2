@@ -885,11 +885,10 @@ footer {
   padding: 60px 7%;
   background: var(--brown);
   color: var(--ivory);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: start;
+  gap: 40px;
 }
 
 .footerLogo span, .footerLogo small { color: var(--ivory); }
