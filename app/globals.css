@@ -35,7 +35,7 @@ em { color: var(--gold); font-style: italic; }
   z-index: 20;
   padding: 36px 7%;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   color: var(--text);
 }
@@ -61,7 +61,7 @@ em { color: var(--gold); font-style: italic; }
 .nav nav {
   display: flex;
   gap: 32px;
-  font-size: 0.68rem;
+  font-size: 0.78rem;
   text-transform: uppercase;
   letter-spacing: 0.14em;
   font-weight: 500;
@@ -90,7 +90,7 @@ em { color: var(--gold); font-style: italic; }
 .navCta {
   border: 1px solid rgba(26,22,16,0.3);
   padding: 10px 20px;
-  font-size: 0.68rem;
+  font-size: 0.78rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
   font-weight: 500;
@@ -185,7 +185,7 @@ em { color: var(--gold); font-style: italic; }
 .heroRight { display: none; }
 
 .heroEyebrow {
-  font-size: 0.62rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.22em;
   color: var(--gold);
@@ -205,7 +205,7 @@ em { color: var(--gold); font-style: italic; }
 
 .heroLeft > p {
   max-width: 380px;
-  font-size: 0.92rem;
+  font-size: 1.05rem;
   line-height: 1.9;
   color: var(--muted);
   margin-bottom: 44px;
@@ -259,7 +259,7 @@ em { color: var(--gold); font-style: italic; }
   max-width: 500px;
   line-height: 1.95;
   color: var(--muted);
-  font-size: 1rem;
+  font-size: 1.15rem;
 }
 
 /* ─── Story / Quote Image ────────────────────────────────── */
@@ -267,7 +267,7 @@ em { color: var(--gold); font-style: italic; }
 .storyImage {
   min-height: 540px;
   background:
-    linear-gradient(to right, rgba(26,22,16,0.04), rgba(26,22,16,0.74)),
+    linear-gradient(to right, rgba(26,22,16,0.55), rgba(26,22,16,0.82)),
     url("/home-interior.png") center / cover;
   display: flex;
   justify-content: flex-end;
@@ -384,6 +384,61 @@ em { color: var(--gold); font-style: italic; }
   font-size: 1rem;
 }
 
+/* ─── Founder section ────────────────────────────────────── */
+
+.founderSection {
+  background: var(--cream);
+  padding: 110px 7%;
+  display: flex;
+  justify-content: center;
+}
+
+.founderInner {
+  max-width: 520px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.founderName {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 3.5vw, 3.2rem);
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+
+.founderTitle {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: rgba(255,255,255,0.55);
+  margin-bottom: 28px;
+}
+
+.founderQuote {
+  font-family: var(--font-serif);
+  font-size: clamp(1.2rem, 2vw, 1.7rem);
+  font-style: italic;
+  color: rgba(255,255,255,0.9);
+  line-height: 1.55;
+  margin-bottom: 28px;
+}
+
+.founderLink {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-weight: 600;
+  color: var(--gold);
+  border-bottom: 1px solid rgba(140,106,40,0.5);
+  padding-bottom: 3px;
+  transition: opacity 0.2s;
+}
+.founderLink:hover { opacity: 0.75; }
+
 /* ─── Cream separator between stacked images ────────────── */
 
 .imageSeparator {
@@ -414,7 +469,7 @@ em { color: var(--gold); font-style: italic; }
   color: var(--gold);
   text-transform: uppercase;
   letter-spacing: 0.18em;
-  font-size: 0.7rem;
+  font-size: 0.82rem;
   font-weight: 600;
   margin-bottom: 18px;
   display: block;
@@ -454,14 +509,14 @@ em { color: var(--gold); font-style: italic; }
 .differenceList h3 {
   text-transform: uppercase;
   letter-spacing: 0.14em;
-  font-size: 0.7rem;
+  font-size: 0.82rem;
   font-weight: 600;
   color: rgba(255,255,255,0.9);
   margin-bottom: 7px;
   font-family: var(--font-sans);
 }
 
-.differenceList p { color: rgba(250,245,236,0.6); line-height: 1.75; font-size: 0.88rem; }
+.differenceList p { color: rgba(250,245,236,0.6); line-height: 1.75; font-size: 1rem; }
 
 /* ─── Contact — merged statement + CTA ──────────────────── */
 
@@ -497,7 +552,7 @@ em { color: var(--gold); font-style: italic; }
 
 .contactCta > p {
   color: var(--muted);
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   line-height: 1.8;
   max-width: 340px;
   margin: 0 auto 28px;
@@ -505,7 +560,7 @@ em { color: var(--gold); font-style: italic; }
 
 .contactAlt {
   margin-top: 48px;
-  font-size: 0.8rem;
+  font-size: 0.95rem;
   color: var(--muted);
 }
 
@@ -707,7 +762,7 @@ footer {
 .footerLinks a { opacity: 0.45; transition: opacity 0.2s; }
 .footerLinks a:hover { opacity: 1; }
 
-.footerContact { color: rgba(250,245,236,0.35); line-height: 1.9; font-size: 0.85rem; }
+.footerContact { color: rgba(250,245,236,0.35); line-height: 1.9; font-size: 1rem; }
 
 /* ─── Interior nav ───────────────────────────────────────── */
 
@@ -1107,6 +1162,82 @@ details[open] summary::after { transform: rotate(45deg); }
 .consultSuccessSub { font-size: 0.88rem !important; margin-top: 8px; }
 .consultSuccessSub a { color: var(--gold); text-decoration: underline; text-underline-offset: 3px; }
 
+/* ─── Nav phone ─────────────────────────────────────────── */
+
+.navPhone {
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  color: var(--gold);
+  font-weight: 500;
+  padding-top: 5px;
+  transition: opacity 0.2s;
+}
+.navPhone:hover { opacity: 0.75; }
+
+/* ─── Trust bar ──────────────────────────────────────────── */
+
+.trustBar {
+  background: var(--sand);
+  border-top: 1px solid rgba(26,22,16,0.08);
+  border-bottom: 1px solid rgba(26,22,16,0.08);
+  padding: 18px 7%;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+.trustItem {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.11em;
+  font-weight: 500;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.trustDot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--gold);
+  flex-shrink: 0;
+  opacity: 0.7;
+}
+
+/* ─── Floating call button ───────────────────────────────── */
+
+.floatCall {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 100;
+  background: var(--gold);
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 20px;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+  font-family: var(--font-sans);
+  box-shadow: 0 4px 20px rgba(140,106,40,0.35);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.floatCall:hover {
+  background: #7a5d22;
+  box-shadow: 0 6px 28px rgba(140,106,40,0.45);
+}
+
+.floatCallIcon { font-size: 0.85rem; }
+
 /* ─── Responsive ─────────────────────────────────────────── */
 
 @media (max-width: 640px) {
@@ -1201,7 +1332,7 @@ details[open] summary::after { transform: rotate(45deg); }
 }
 
 @media (max-width: 1000px) {
-  .nav nav, .navCta { display: none; }
+  .nav nav, .navCta, .navPhone { display: none; }
   .hamburger { display: flex; }
   .siteNavLinks, .siteNav .navCta { display: none; }
   .siteNav .hamburger { display: flex; }

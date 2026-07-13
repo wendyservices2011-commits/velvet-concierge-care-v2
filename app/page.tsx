@@ -20,6 +20,7 @@ export default function Home() {
           <Link href="/faq">FAQ</Link>
           <a href="#contact">Contact</a>
         </nav>
+        <a href="tel:5168536445" className="navPhone">(516) 853-6445</a>
         <Link href="/consultation" className="navCta">Schedule a Consultation</Link>
         <button
           className={`hamburger${menuOpen ? " open" : ""}`}
@@ -62,6 +63,15 @@ export default function Home() {
         <div className="heroScroll"><span /></div>
       </section>
 
+      {/* Trust bar */}
+      <div className="trustBar">
+        <div className="trustItem"><span className="trustDot" />Nurse-Founded &amp; Operated</div>
+        <div className="trustItem"><span className="trustDot" />AHCA Licensed</div>
+        <div className="trustItem"><span className="trustDot" />Background-Screened Caregivers</div>
+        <div className="trustItem"><span className="trustDot" />Personalized Care Plans</div>
+        <div className="trustItem"><span className="trustDot" />Serving Palm Beach County</div>
+      </div>
+
       {/* Intro — enormous type */}
       <section className="intro">
         <h2>
@@ -76,15 +86,18 @@ export default function Home() {
         </p>
       </section>
 
-      {/* Cinematic: home interior + quote */}
+      {/* Founder section — photo background with overlay */}
       <section className="storyImage">
-        <div className="testimonial">
-          <span className="quoteMarkDecor">&ldquo;</span>
-          <p>
-            We believe peace of mind begins with knowing someone thoughtful,
-            capable, and attentive is there when your family needs support.
-          </p>
-          <span className="testimonialAttrib">— The Velvet Concierge Care Team</span>
+        <div className="founderInner">
+          <p className="eyebrow" style={{ color: "var(--gold)" }}>Meet the Founder</p>
+          <h2 className="founderName">Wendy Bien-Aime, RN</h2>
+          <p className="founderTitle">Founder, Velvet Concierge Care</p>
+          <blockquote className="founderQuote">
+            &ldquo;After caring for families for over fifteen years, I created Velvet Concierge Care
+            to provide the kind of thoughtful, dependable support I once wished
+            my own family had.&rdquo;
+          </blockquote>
+          <a href="/about" className="founderLink">Read My Story →</a>
         </div>
       </section>
 
@@ -94,7 +107,7 @@ export default function Home() {
       {/* Cinematic: hands photo */}
       <section id="services" className="difference">
         <div className="differenceContent">
-          <p className="eyebrow">The Velvet Difference</p>
+          <p className="eyebrow">Why Families Choose Velvet Concierge Care</p>
           <h2>
             Genuine support.<br />
             Thoughtful care.<br />
@@ -105,21 +118,21 @@ export default function Home() {
               <span className="itemNum">01</span>
               <div>
                 <h3>Attentive, Experienced Care</h3>
-                <p>Someone who notices what others miss and shows up consistently, with the experience to handle whatever your loved one needs.</p>
+                <p>Our caregivers are background-screened, trained, and supervised by a Registered Nurse. Someone who notices what others miss — and knows what to do about it.</p>
               </div>
             </div>
             <div className="differenceItem">
               <span className="itemNum">02</span>
               <div>
                 <h3>Personalized Support</h3>
-                <p>Care tailored to your unique needs, preferences, and lifestyle.</p>
+                <p>No two families are the same. Before care begins, we learn your loved one's routines, preferences, and needs — then build a plan around them, not the other way around.</p>
               </div>
             </div>
             <div className="differenceItem">
               <span className="itemNum">03</span>
               <div>
                 <h3>Clear Communication</h3>
-                <p>We keep you informed and involved every step of the way.</p>
+                <p>You'll never wonder what's happening. We keep families informed, involved, and at ease — because peace of mind is part of the service.</p>
               </div>
             </div>
           </div>
@@ -139,10 +152,16 @@ export default function Home() {
             Schedule a Consultation <span>→</span>
           </Link>
           <p className="contactAlt">
-            Prefer to call? <a href="tel:8435327181">(843) 532-7181</a>
+            Prefer to call? <a href="tel:5168536445">(516) 853-6445</a>
           </p>
         </div>
       </section>
+
+      {/* Floating call button */}
+      <a href="tel:5168536445" className="floatCall">
+        <span className="floatCallIcon">✆</span>
+        <span className="floatCallText">Call Us</span>
+      </a>
 
       <footer>
         <div className="footerLogo">
@@ -158,7 +177,7 @@ export default function Home() {
           <a href="#contact">Contact</a>
         </div>
         <div className="footerContact">
-          <p>(843) 532-7181</p>
+          <p>(516) 853-6445</p>
           <p><a href="mailto:info@velvetconciergecare.com">info@velvetconciergecare.com</a></p>
           <p>Serving Palm Beach County, FL</p>
         </div>
