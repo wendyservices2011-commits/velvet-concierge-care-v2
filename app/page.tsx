@@ -18,9 +18,7 @@ export default function Home() {
           <Link href="/who-we-help">Who We Help</Link>
           <Link href="/about">About</Link>
           <Link href="/faq">FAQ</Link>
-          <a href="#contact">Contact</a>
         </nav>
-        <a href="tel:5168536445" className="navPhone">(516) 853-6445</a>
         <Link href="/consultation" className="navCta">Schedule a Consultation</Link>
         <button
           className={`hamburger${menuOpen ? " open" : ""}`}
