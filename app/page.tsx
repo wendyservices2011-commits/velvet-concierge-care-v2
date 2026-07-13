@@ -18,6 +18,7 @@ export default function Home() {
           <Link href="/who-we-help">Who We Help</Link>
           <Link href="/about">About</Link>
           <Link href="/faq">FAQ</Link>
+          <Link href="/blog">Blog</Link>
         </nav>
         <Link href="/consultation" className="navCta">Schedule a Consultation</Link>
         <button
@@ -33,7 +34,7 @@ export default function Home() {
           <Link href="/who-we-help" onClick={() => setMenuOpen(false)}>Who We Help</Link>
           <Link href="/about" onClick={() => setMenuOpen(false)}>About</Link>
           <Link href="/faq" onClick={() => setMenuOpen(false)}>FAQ</Link>
-          <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
+          <Link href="/blog" onClick={() => setMenuOpen(false)}>Blog</Link>
           <Link href="/consultation" className="mobileMenuCta" onClick={() => setMenuOpen(false)}>
             Schedule a Consultation
           </Link>
@@ -197,6 +198,7 @@ export default function Home() {
           <Link href="/who-we-help">Who We Help</Link>
           <Link href="/about">About</Link>
           <Link href="/faq">FAQ</Link>
+          <Link href="/blog">Blog</Link>
         </div>
         <div className="footerContact">
           <p className="footerContactLabel">Contact</p>
