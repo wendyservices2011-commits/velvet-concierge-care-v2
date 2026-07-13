@@ -981,14 +981,15 @@ footer {
 
 .footerLinks {
   display: flex;
-  gap: 24px;
-  font-size: 0.63rem;
+  gap: 20px;
+  font-size: 0.58rem;
   text-transform: uppercase;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.12em;
   font-weight: 500;
   flex-wrap: nowrap;
   align-items: flex-start;
-  padding-top: 0;
+  white-space: nowrap;
+  padding-top: 16px;
 }
 
 .footerLinks a { opacity: 0.45; transition: opacity 0.2s; }
@@ -1482,8 +1483,8 @@ details[open] summary::after { transform: rotate(45deg); }
 
 .floatCall {
   position: fixed;
-  bottom: 28px;
-  right: 28px;
+  bottom: 16px;
+  right: 16px;
   z-index: 100;
   background: var(--gold);
   color: white;
