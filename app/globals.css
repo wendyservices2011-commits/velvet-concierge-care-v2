@@ -905,8 +905,8 @@ footer {
   text-transform: uppercase;
   letter-spacing: 0.14em;
   font-weight: 500;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: flex-start;
   padding-top: 0;
 }
 
