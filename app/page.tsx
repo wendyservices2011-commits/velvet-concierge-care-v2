@@ -89,6 +89,16 @@ export default function Home() {
         </p>
       </section>
 
+      {/* Stat callout */}
+      <div className="statCallout">
+        <span className="statLine" />
+        <p className="statText">
+          Patients with RN-led home follow-up are readmitted at less than half
+          the rate of those without it.
+        </p>
+        <p className="statSource">Naylor et al., <em>JAMA</em></p>
+      </div>
+
       {/* Why Families Choose — two column: headline+photo left, list right */}
       <section id="services" className="whySection">
         <div className="whyLeft">

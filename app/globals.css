@@ -1679,4 +1679,41 @@ details[open] summary::after { transform: rotate(45deg); }
 
   footer { grid-template-columns: 1fr; gap: 36px; }
   .footerLinks { flex-direction: column; gap: 14px; }
+
+  .statCallout { flex-direction: column; gap: 16px; padding: 44px 6%; }
+  .statLine { display: none; }
+}
+
+/* Stat callout — proof point between intro and why section */
+.statCallout {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 44px 7%;
+  background: var(--ivory);
+  border-top: 1px solid rgba(140,106,40,0.2);
+  border-bottom: 1px solid rgba(140,106,40,0.2);
+}
+.statLine {
+  flex-shrink: 0;
+  width: 48px;
+  height: 1px;
+  background: var(--gold);
+}
+.statText {
+  font-family: var(--font-serif);
+  font-size: clamp(1rem, 1.4vw, 1.25rem);
+  font-weight: 400;
+  color: var(--text);
+  line-height: 1.55;
+  flex: 1;
+}
+.statSource {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-weight: 500;
+  color: var(--gold);
+  white-space: nowrap;
+  flex-shrink: 0;
 }
