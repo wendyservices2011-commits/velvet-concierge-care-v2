@@ -151,24 +151,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Merged statement + contact */}
-      <section id="contact" className="contactMerged">
-        <p className="contactStatement">
-          We don't fit families into care plans.{" "}
-          <em>We build care plans around families.</em>
-        </p>
-        <div className="contactCta">
-          <h2>Let's talk about<br /><em>how we can help.</em></h2>
-          <p>Every family's situation is different.<br />We'd love to learn about yours.</p>
-          <Link href="/consultation" className="darkButton">
-            Schedule a Consultation <span>→</span>
-          </Link>
-          <p className="contactAlt">
-            Prefer to call? <a href="tel:5168536445">(516) 853-6445</a>
-          </p>
-        </div>
-      </section>
-
       {/* Services preview — 3 cards, Lovable style */}
       <section className="servicesPreview">
         <div className="servicesPreviewHead">
@@ -188,6 +170,24 @@ export default function Home() {
             <h3>Transportation</h3>
             <p>Safe, comfortable transit to appointments, social engagements, and errands.</p>
           </div>
+        </div>
+      </section>
+
+      {/* Merged statement + contact */}
+      <section id="contact" className="contactMerged">
+        <p className="contactStatement">
+          We don't fit families into care plans.{" "}
+          <em>We build care plans around families.</em>
+        </p>
+        <div className="contactCta">
+          <h2>Let's talk about<br /><em>how we can help.</em></h2>
+          <p>Every family's situation is different.<br />We'd love to learn about yours.</p>
+          <Link href="/consultation" className="darkButton">
+            Schedule a Consultation <span>→</span>
+          </Link>
+          <p className="contactAlt">
+            Prefer to call? <a href="tel:5168536445">(516) 853-6445</a>
+          </p>
         </div>
       </section>
 
