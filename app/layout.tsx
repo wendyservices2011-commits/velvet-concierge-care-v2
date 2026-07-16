@@ -24,8 +24,8 @@ const jsonLd = {
   "@type": "MedicalBusiness",
   "name": "Velvet Concierge Care",
   "description": "Private duty nursing and concierge care services led by a Registered Nurse. Serving seniors, post-surgical patients, and adults managing chronic illness across Palm Beach County, Florida.",
-  "url": "https://velvet-concierge-care-v2.vercel.app",
-  "telephone": "+18435327181",
+  "url": "https://velvetconciergecare.com",
+  "telephone": "+15168536445",
   "email": "info@velvetconciergecare.com",
   "priceRange": "$$$$",
   "address": {
@@ -50,9 +50,7 @@ const jsonLd = {
     "Medication Management",
     "Care Coordination"
   ],
-  "sameAs": [
-    "https://github.com/wendyservices2011-commits/velvet-concierge-care-v2"
-  ]
+  "sameAs": []
 };
 
 export default function RootLayout({
