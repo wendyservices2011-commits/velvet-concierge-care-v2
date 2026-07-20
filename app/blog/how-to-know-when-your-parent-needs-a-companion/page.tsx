@@ -1,6 +1,7 @@
 import SiteNav from "@/app/components/SiteNav";
 import SiteFooter from "@/app/components/SiteFooter";
 import SiteContactCta from "@/app/components/SiteContactCta";
+import BlogSchema from "@/app/components/BlogSchema";
 import Link from "next/link";
 
 export const metadata = {
@@ -11,6 +12,11 @@ export const metadata = {
 export default function Article() {
   return (
     <>
+      <BlogSchema
+        title="How to Know When Your Parent Needs a Companion at Home"
+        description="It often starts with small things — a missed meal, a quiet phone. Here's how to recognize the signs that your parent may need companionship at home."
+        url="/blog/how-to-know-when-your-parent-needs-a-companion"
+      />
       <SiteNav />
       <main>
         <section className="pageHero">

@@ -1,6 +1,7 @@
 import SiteNav from "@/app/components/SiteNav";
 import SiteFooter from "@/app/components/SiteFooter";
 import SiteContactCta from "@/app/components/SiteContactCta";
+import BlogSchema from "@/app/components/BlogSchema";
 import Link from "next/link";
 
 export const metadata = {
@@ -11,6 +12,11 @@ export const metadata = {
 export default function Article() {
   return (
     <>
+      <BlogSchema
+        title="How to Prepare Your Home After Surgery"
+        description="The hospital sends you home with discharge papers. What they don't always tell you is how much the first two weeks actually matter — and how to prepare."
+        url="/blog/how-to-prepare-your-home-after-surgery"
+      />
       <SiteNav />
       <main>
         <section className="pageHero">

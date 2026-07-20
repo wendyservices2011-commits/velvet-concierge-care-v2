@@ -1,6 +1,7 @@
 import SiteNav from "@/app/components/SiteNav";
 import SiteFooter from "@/app/components/SiteFooter";
 import SiteContactCta from "@/app/components/SiteContactCta";
+import BlogSchema from "@/app/components/BlogSchema";
 import Link from "next/link";
 
 export const metadata = {
@@ -11,6 +12,11 @@ export const metadata = {
 export default function Article() {
   return (
     <>
+      <BlogSchema
+        title="What Does a Homemaker Actually Do?"
+        description="Most people picture light cleaning. The reality of professional homemaker services is much broader — and for many families, far more valuable than they expected."
+        url="/blog/what-does-a-homemaker-actually-do"
+      />
       <SiteNav />
       <main>
         <section className="pageHero">

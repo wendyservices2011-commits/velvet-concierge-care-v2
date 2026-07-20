@@ -1,6 +1,7 @@
 import SiteNav from "@/app/components/SiteNav";
 import SiteFooter from "@/app/components/SiteFooter";
 import SiteContactCta from "@/app/components/SiteContactCta";
+import BlogSchema from "@/app/components/BlogSchema";
 import Link from "next/link";
 
 export const metadata = {
@@ -11,6 +12,11 @@ export const metadata = {
 export default function Article() {
   return (
     <>
+      <BlogSchema
+        title="What to Look for When Hiring In-Home Care"
+        description="Not all in-home care is created equal. Here are the questions every family should ask before welcoming someone into their home."
+        url="/blog/what-to-look-for-when-hiring-in-home-care"
+      />
       <SiteNav />
       <main>
         <section className="pageHero">

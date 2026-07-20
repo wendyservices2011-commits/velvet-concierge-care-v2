@@ -1,6 +1,7 @@
 import SiteNav from "@/app/components/SiteNav";
 import SiteFooter from "@/app/components/SiteFooter";
 import SiteContactCta from "@/app/components/SiteContactCta";
+import BlogSchema from "@/app/components/BlogSchema";
 import Link from "next/link";
 
 export const metadata = {
@@ -11,6 +12,11 @@ export const metadata = {
 export default function Article() {
   return (
     <>
+      <BlogSchema
+        title="Aging in Place vs. Assisted Living: What Families in Palm Beach County Should Know"
+        description="For many families, the choice isn't between safety and independence. Here's how to think through aging in place versus assisted living in Palm Beach County."
+        url="/blog/aging-in-place-vs-assisted-living"
+      />
       <SiteNav />
       <main>
         <section className="pageHero">
