@@ -17,6 +17,9 @@ export const metadata = {
   title: "Velvet Concierge Care — Private Duty Nursing, Palm Beach County",
   description:
     "RN-led private in-home nursing and concierge care for seniors, adults recovering from surgery, and families across Palm Beach County, Florida.",
+  verification: {
+    google: "bRYxMC3P0-HCLo3mmpy7aRcDr8WBE1IQI996AJ1rkhA",
+  },
 };
 
 const jsonLd = {
