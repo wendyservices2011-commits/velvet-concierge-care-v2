@@ -1444,6 +1444,48 @@ details[open] summary::after { transform: rotate(45deg); }
 }
 .navPhone:hover { opacity: 0.75; }
 
+/* ─── Scrolling Ticker ───────────────────────────────────── */
+.ticker {
+  background: var(--ivory);
+  border-top: 1px solid rgba(26,22,16,0.08);
+  border-bottom: 1px solid rgba(26,22,16,0.08);
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 13px 0;
+}
+
+.tickerTrack {
+  display: inline-flex;
+  animation: tickerScroll 30s linear infinite;
+}
+
+.tickerItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  font-family: var(--font-sans);
+  font-size: 0.6rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(26,22,16,0.5);
+  padding-right: 48px;
+}
+
+.tickerDot {
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--gold);
+  opacity: 0.8;
+  flex-shrink: 0;
+}
+
+@keyframes tickerScroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
 /* ─── Trust bar ──────────────────────────────────────────── */
 
 .trustBar {

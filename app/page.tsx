@@ -66,6 +66,35 @@ export default function Home() {
         <div className="heroScroll"><span /></div>
       </section>
 
+      {/* Ticker */}
+      <div className="ticker">
+        <div className="tickerTrack">
+          {[
+            "Palm Beach County",
+            "AHCA Licensed",
+            "Nurse-Founded",
+            "Companion Care",
+            "Homemaking",
+            "Transportation",
+            "Background-Screened Caregivers",
+            "Personalized Care Plans",
+            "Palm Beach County",
+            "AHCA Licensed",
+            "Nurse-Founded",
+            "Companion Care",
+            "Homemaking",
+            "Transportation",
+            "Background-Screened Caregivers",
+            "Personalized Care Plans",
+          ].map((label, i) => (
+            <span key={i} className="tickerItem">
+              <span className="tickerDot" />
+              {label}
+            </span>
+          ))}
+        </div>
+      </div>
+
       {/* Trust bar */}
       <div className="trustBar">
         <div className="trustItem"><span className="trustDot" />Nurse-Founded &amp; Operated</div>
