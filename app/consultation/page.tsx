@@ -99,7 +99,7 @@ export default function ConsultationPage() {
             </p>
             <p className="consultSuccessSub">
               If your need is urgent, please call us directly at{" "}
-              <a href="tel:8435327181">(843) 532-7181</a>.
+              <a href="tel:15615240011">(561) 524-0011</a>.
             </p>
             <Link href="/" className="darkButton" style={{ marginTop: "36px", display: "inline-flex" }}>
               Return Home <span>→</span>
@@ -420,7 +420,7 @@ export default function ConsultationPage() {
                 {status === "error" && (
                   <p className="consultError">
                     Something went wrong. Please call us directly at{" "}
-                    <a href="tel:8435327181">(843) 532-7181</a>.
+                    <a href="tel:15615240011">(561) 524-0011</a>.
                   </p>
                 )}
               </div>

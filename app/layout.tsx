@@ -28,7 +28,7 @@ const jsonLd = {
   "name": "Velvet Concierge Care",
   "description": "Private duty nursing and concierge care services led by a Registered Nurse. Serving seniors, post-surgical patients, and adults managing chronic illness across Palm Beach County, Florida.",
   "url": "https://velvetconciergecare.com",
-  "telephone": "+15168536445",
+  "telephone": "+15615240011",
   "email": "info@velvetconciergecare.com",
   "priceRange": "$$$$",
   "address": {

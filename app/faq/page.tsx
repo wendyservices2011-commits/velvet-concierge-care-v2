@@ -88,7 +88,7 @@ export default function FaqPage() {
           <details>
             <summary>How do I get started?</summary>
             <div className="faqAnswer">
-              <p>Call us at (843) 532-7181 to schedule a private consultation. There's no obligation and no pressure. We'll listen to your family's situation, answer your questions honestly, and together decide whether Velvet Concierge Care is the right fit.</p>
+              <p>Call us at (561) 524-0011 to schedule a private consultation. There's no obligation and no pressure. We'll listen to your family's situation, answer your questions honestly, and together decide whether Velvet Concierge Care is the right fit.</p>
             </div>
           </details>
 

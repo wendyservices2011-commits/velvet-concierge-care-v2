@@ -186,13 +186,13 @@ export default function Home() {
             Schedule a Consultation <span>→</span>
           </Link>
           <p className="contactAlt">
-            Prefer to call? <a href="tel:5168536445">(516) 853-6445</a>
+            Prefer to call? <a href="tel:5615240011">(561) 524-0011</a>
           </p>
         </div>
       </section>
 
       {/* Floating call button */}
-      <a href="tel:5168536445" className="floatCall">
+      <a href="tel:5615240011" className="floatCall">
         <span className="floatCallIcon">✆</span>
         <span className="floatCallText">Call Us</span>
       </a>
@@ -212,7 +212,7 @@ export default function Home() {
         </div>
         <div className="footerContact">
           <p className="footerContactLabel">Contact</p>
-          <p>(516) 853-6445</p>
+          <p>(561) 524-0011</p>
           <p><a href="mailto:info@velvetconciergecare.com">info@velvetconciergecare.com</a></p>
           <p>Serving Palm Beach County, FL</p>
         </div>
