@@ -95,14 +95,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Trust bar */}
-      <div className="trustBar">
-        <div className="trustItem"><span className="trustDot" />Nurse-Founded &amp; Operated</div>
-        <div className="trustItem"><span className="trustDot" />AHCA Licensed</div>
-        <div className="trustItem"><span className="trustDot" />Background-Screened Caregivers</div>
-        <div className="trustItem"><span className="trustDot" />Personalized Care Plans</div>
-        <div className="trustItem"><span className="trustDot" />Serving Palm Beach County</div>
-      </div>
 
       {/* Intro — enormous type */}
       <section className="intro">
