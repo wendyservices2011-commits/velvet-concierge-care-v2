@@ -1,14 +1,21 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
     <main>
-      <header className="nav">
+      <header className={`nav${scrolled ? " navScrolled" : ""}`}>
         <div className="logo">
           <span>VELVET</span>
           <small>CONCIERGE CARE</small>

@@ -44,6 +44,12 @@ em { color: var(--gold); font-style: italic; }
   transition: background 0.3s ease, border-color 0.3s ease, backdrop-filter 0.3s ease;
 }
 
+.navScrolled {
+  background: rgba(250,245,236,0.96);
+  backdrop-filter: blur(8px);
+  border-bottom-color: rgba(26,22,16,0.07);
+}
+
 .logo, .footerLogo { text-align: center; width: fit-content; }
 
 .logo span, .footerLogo span {
